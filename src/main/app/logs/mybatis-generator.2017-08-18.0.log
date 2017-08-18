@@ -1,0 +1,14 @@
+[INFO] [18:21:02.589] [JavaFX Application Thread] [] com.zzg.mybatis.generator.util.DbUtil.<clinit>:32 --> load driver class: com.mysql.jdbc.Driver@d23d9e
+[INFO] [18:21:02.643] [JavaFX Application Thread] [] com.zzg.mybatis.generator.util.DbUtil.<clinit>:32 --> load driver class: oracle.jdbc.driver.OracleDriver@657362
+[INFO] [18:21:02.708] [JavaFX Application Thread] [] com.zzg.mybatis.generator.util.DbUtil.<clinit>:32 --> load driver class: org.postgresql.Driver@d22476
+[INFO] [18:21:03.044] [JavaFX Application Thread] [] com.zzg.mybatis.generator.util.DbUtil.<clinit>:32 --> load driver class: SQLServerDriver:2
+[INFO] [18:21:03.046] [JavaFX Application Thread] [] com.zzg.mybatis.generator.util.DbUtil.getConnectionUrlWithSchema:106 --> getConnectionUrlWithSchema, connection url: jdbc:oracle:thin:@192.168.102.125:1521:portaldb
+[INFO] [18:21:03.426] [JavaFX Application Thread] [] com.zzg.mybatis.generator.util.DbUtil.getConnection:49 --> getConnection, connection url: oracle.jdbc.driver.T4CConnection@1bca731
+[INFO] [18:21:22.043] [JavaFX Application Thread] [] com.zzg.mybatis.generator.util.ConfigHelper.loadGeneratorConfigs:180 --> sql: SELECT * FROM generator_config
+[INFO] [18:21:54.607] [JavaFX Application Thread] [] com.zzg.mybatis.generator.util.DbUtil.getConnectionUrlWithSchema:106 --> getConnectionUrlWithSchema, connection url: jdbc:oracle:thin:@192.168.102.125:1521:portaldb
+[INFO] [18:21:54.610] [JavaFX Application Thread] [] com.zzg.mybatis.generator.util.DbUtil.getTableNames:55 --> getTableNames, connection url: jdbc:oracle:thin:@192.168.102.125:1521:portaldb
+[INFO] [18:21:54.612] [JavaFX Application Thread] [] com.zzg.mybatis.generator.util.DbUtil.getConnectionUrlWithSchema:106 --> getConnectionUrlWithSchema, connection url: jdbc:oracle:thin:@192.168.102.125:1521:portaldb
+[INFO] [18:21:54.681] [JavaFX Application Thread] [] com.zzg.mybatis.generator.util.DbUtil.getConnection:49 --> getConnection, connection url: oracle.jdbc.driver.T4CConnection@11188bf
+[INFO] [18:24:30.954] [JavaFX Application Thread] [] com.zzg.mybatis.generator.util.ConfigHelper.findConnectorLibPath:213 --> jar resource: jar:file:/E:/app/mybatis-generator-gui.jar!/logback.xml
+[INFO] [18:24:30.959] [JavaFX Application Thread] [] com.zzg.mybatis.generator.bridge.MybatisGeneratorBridge.generate:60 --> connectorLibPath: E:\app\lib\ojdbc14.jar
+[INFO] [18:24:30.968] [JavaFX Application Thread] [] com.zzg.mybatis.generator.util.DbUtil.getConnectionUrlWithSchema:106 --> getConnectionUrlWithSchema, connection url: jdbc:oracle:thin:@192.168.102.125:1521:portaldb
