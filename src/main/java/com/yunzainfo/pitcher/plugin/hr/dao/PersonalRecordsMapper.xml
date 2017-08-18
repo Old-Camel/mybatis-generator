@@ -1,0 +1,2422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yunzainfo.pitcher.plugin.hr.dao.PersonalRecordsMapper">
+  <resultMap id="BaseResultMap" type="com.yunzainfo.pitcher.plugin.hr.entity.PersonalRecords">
+    <result column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="DEPT_ID" jdbcType="VARCHAR" property="deptId" />
+    <result column="XM" jdbcType="VARCHAR" property="xm" />
+    <result column="SEX" jdbcType="DECIMAL" property="sex" />
+    <result column="SF" jdbcType="VARCHAR" property="sf" />
+    <result column="CSRQ" jdbcType="DATE" property="csrq" />
+    <result column="MZ" jdbcType="VARCHAR" property="mz" />
+    <result column="JG" jdbcType="VARCHAR" property="jg" />
+    <result column="ZGXL" jdbcType="VARCHAR" property="zgxl" />
+    <result column="XW" jdbcType="VARCHAR" property="xw" />
+    <result column="QRZXL" jdbcType="VARCHAR" property="qrzxl" />
+    <result column="BYSJ_ONE" jdbcType="DATE" property="bysjOne" />
+    <result column="SXZY_ONE" jdbcType="VARCHAR" property="sxzyOne" />
+    <result column="HQXL" jdbcType="VARCHAR" property="hqxl" />
+    <result column="HQXLSJ" jdbcType="DATE" property="hqxlsj" />
+    <result column="SXSJ" jdbcType="DATE" property="sxsj" />
+    <result column="ZZDZ" jdbcType="VARCHAR" property="zzdz" />
+    <result column="CYM" jdbcType="VARCHAR" property="cym" />
+    <result column="SFZHM" jdbcType="VARCHAR" property="sfzhm" />
+    <result column="BYYX_ONE" jdbcType="VARCHAR" property="byyxOne" />
+    <result column="SXZY_TWO" jdbcType="VARCHAR" property="sxzyTwo" />
+    <result column="BYYX_ZZ" jdbcType="VARCHAR" property="byyxZz" />
+    <result column="HQXW" jdbcType="VARCHAR" property="hqxw" />
+    <result column="HQXWSJ" jdbcType="DATE" property="hqxwsj" />
+    <result column="HQXWYX" jdbcType="VARCHAR" property="hqxwyx" />
+    <result column="HQXWZY" jdbcType="VARCHAR" property="hqxwzy" />
+    <result column="ZZMM" jdbcType="DECIMAL" property="zzmm" />
+    <result column="HSHDRD" jdbcType="VARCHAR" property="hshdrd" />
+    <result column="CJGZSJ" jdbcType="DATE" property="cjgzsj" />
+    <result column="LBDWSJ" jdbcType="DATE" property="lbdwsj" />
+    <result column="ZZZT" jdbcType="DECIMAL" property="zzzt" />
+    <result column="TXSJ" jdbcType="DATE" property="txsj" />
+    <result column="DCSJ" jdbcType="DATE" property="dcsj" />
+    <result column="BGSJ" jdbcType="DATE" property="bgsj" />
+    <result column="SWSJ" jdbcType="DATE" property="swsj" />
+    <result column="LXSJ" jdbcType="DATE" property="lxsj" />
+    <result column="SZKS" jdbcType="VARCHAR" property="szks" />
+    <result column="YXZZW" jdbcType="VARCHAR" property="yxzzw" />
+    <result column="ZJ" jdbcType="VARCHAR" property="zj" />
+    <result column="RXZSJ" jdbcType="DATE" property="rxzsj" />
+    <result column="RTZJSJ" jdbcType="DATE" property="rtzjsj" />
+    <result column="ZYJSXL" jdbcType="VARCHAR" property="zyjsxl" />
+    <result column="JSZW" jdbcType="VARCHAR" property="jszw" />
+    <result column="PRZT" jdbcType="DECIMAL" property="przt" />
+    <result column="PRSJ" jdbcType="DATE" property="prsj" />
+    <result column="YHZG" jdbcType="VARCHAR" property="yhzg" />
+    <result column="ZGQDSJ" jdbcType="DATE" property="zgqdsj" />
+    <result column="JXJB" jdbcType="VARCHAR" property="jxjb" />
+    <result column="SSSJ" jdbcType="DATE" property="sssj" />
+    <result column="JH" jdbcType="DECIMAL" property="jh" />
+    <result column="FD" jdbcType="DECIMAL" property="fd" />
+    <result column="XH" jdbcType="DECIMAL" property="xh" />
+    <result column="DAH" jdbcType="VARCHAR" property="dah" />
+    <result column="GJJSZGZ" jdbcType="DECIMAL" property="gjjszgz" />
+    <result column="DAZDW" jdbcType="DECIMAL" property="dazdw" />
+    <result column="GRJL" jdbcType="VARCHAR" property="grjl" />
+    <result column="TC" jdbcType="VARCHAR" property="tc" />
+    <result column="JTCY" jdbcType="VARCHAR" property="jtcy" />
+    <result column="CZDZ" jdbcType="VARCHAR" property="czdz" />
+    <result column="CZDZYB" jdbcType="VARCHAR" property="czdzyb" />
+    <result column="ZZDZYB" jdbcType="VARCHAR" property="zzdzyb" />
+    <result column="BGSDH" jdbcType="VARCHAR" property="bgsdh" />
+    <result column="ZZDH" jdbcType="VARCHAR" property="zzdh" />
+    <result column="CHJ" jdbcType="VARCHAR" property="chj" />
+    <result column="YDDH" jdbcType="VARCHAR" property="yddh" />
+    <result column="DZYX" jdbcType="VARCHAR" property="dzyx" />
+    <result column="GZLX" jdbcType="VARCHAR" property="gzlx" />
+    <result column="XZW" jdbcType="VARCHAR" property="xzw" />
+    <result column="JB" jdbcType="VARCHAR" property="jb" />
+    <result column="ZWGZ" jdbcType="DECIMAL" property="zwgz" />
+    <result column="GZJB" jdbcType="VARCHAR" property="gzjb" />
+    <result column="GZZXSJ" jdbcType="DATE" property="gzzxsj" />
+    <result column="GZDC" jdbcType="DECIMAL" property="gzdc" />
+    <result column="GZE" jdbcType="VARCHAR" property="gze" />
+    <result column="JJSJ" jdbcType="DATE" property="jjsj" />
+    <result column="LTSJ" jdbcType="DATE" property="ltsj" />
+    <result column="BDSJ" jdbcType="DATE" property="bdsj" />
+    <result column="JSDJGZ" jdbcType="DECIMAL" property="jsdjgz" />
+    <result column="GWGZDC" jdbcType="DECIMAL" property="gwgzdc" />
+    <result column="GWGZE" jdbcType="DECIMAL" property="gwgze" />
+    <result column="JDSJ" jdbcType="DATE" property="jdsj" />
+    <result column="GW" jdbcType="VARCHAR" property="gw" />
+    <result column="GWDJ" jdbcType="VARCHAR" property="gwdj" />
+    <result column="ZJGWGZE" jdbcType="DECIMAL" property="zjgwgze" />
+    <result column="XJ" jdbcType="DECIMAL" property="xj" />
+    <result column="XJGZE" jdbcType="DECIMAL" property="xjgze" />
+    <result column="JXJT" jdbcType="DECIMAL" property="jxjt" />
+    <result column="TGJT" jdbcType="DECIMAL" property="tgjt" />
+    <result column="BLJT" jdbcType="DECIMAL" property="bljt" />
+    <result column="ZFBT" jdbcType="DECIMAL" property="zfbt" />
+    <result column="DJQNF" jdbcType="DECIMAL" property="djqnf" />
+    <result column="KHJC" jdbcType="VARCHAR" property="khjc" />
+    <result column="NDKH" jdbcType="VARCHAR" property="ndkh" />
+    <result column="SHBXH" jdbcType="VARCHAR" property="shbxh" />
+    <result column="SHBXNR" jdbcType="VARCHAR" property="shbxnr" />
+    <result column="JHSYZM" jdbcType="DECIMAL" property="jhsyzm" />
+    <result column="PXZ" jdbcType="VARCHAR" property="pxz" />
+    <result column="BZ" jdbcType="VARCHAR" property="bz" />
+    <result column="ZXSJ" jdbcType="DATE" property="zxsj" />
+    <result column="BZ_TWO" jdbcType="VARCHAR" property="bzTwo" />
+    <result column="YJXBZ" jdbcType="DECIMAL" property="yjxbz" />
+    <result column="XJXBZ" jdbcType="DECIMAL" property="xjxbz" />
+    <result column="ZXSJ_ONE" jdbcType="DATE" property="zxsjOne" />
+    <result column="LB" jdbcType="VARCHAR" property="lb" />
+    <result column="SSJB" jdbcType="VARCHAR" property="ssjb" />
+  </resultMap>
+  <insert id="insert" parameterType="com.yunzainfo.pitcher.plugin.hr.entity.PersonalRecords">
+    insert into PERSONAL_RECORDS (ID, DEPT_ID, XM, 
+      SEX, SF, CSRQ, MZ, 
+      JG, ZGXL, XW, QRZXL, 
+      BYSJ_ONE, SXZY_ONE, HQXL, 
+      HQXLSJ, SXSJ, ZZDZ, CYM, 
+      SFZHM, BYYX_ONE, SXZY_TWO, 
+      BYYX_ZZ, HQXW, HQXWSJ, 
+      HQXWYX, HQXWZY, ZZMM, 
+      HSHDRD, CJGZSJ, LBDWSJ, ZZZT, 
+      TXSJ, DCSJ, BGSJ, SWSJ, 
+      LXSJ, SZKS, YXZZW, ZJ, 
+      RXZSJ, RTZJSJ, ZYJSXL, JSZW, 
+      PRZT, PRSJ, YHZG, ZGQDSJ, 
+      JXJB, SSSJ, JH, FD, 
+      XH, DAH, GJJSZGZ, DAZDW, 
+      GRJL, TC, JTCY, CZDZ, 
+      CZDZYB, ZZDZYB, BGSDH, 
+      ZZDH, CHJ, YDDH, DZYX, 
+      GZLX, XZW, JB, ZWGZ, 
+      GZJB, GZZXSJ, GZDC, GZE, 
+      JJSJ, LTSJ, BDSJ, JSDJGZ, 
+      GWGZDC, GWGZE, JDSJ, GW, 
+      GWDJ, ZJGWGZE, XJ, 
+      XJGZE, JXJT, TGJT, 
+      BLJT, ZFBT, DJQNF, 
+      KHJC, NDKH, SHBXH, 
+      SHBXNR, JHSYZM, PXZ, 
+      BZ, ZXSJ, BZ_TWO, YJXBZ, 
+      XJXBZ, ZXSJ_ONE, LB, SSJB
+      )
+    values (#{id,jdbcType=VARCHAR}, #{deptId,jdbcType=VARCHAR}, #{xm,jdbcType=VARCHAR}, 
+      #{sex,jdbcType=DECIMAL}, #{sf,jdbcType=VARCHAR}, #{csrq,jdbcType=DATE}, #{mz,jdbcType=VARCHAR}, 
+      #{jg,jdbcType=VARCHAR}, #{zgxl,jdbcType=VARCHAR}, #{xw,jdbcType=VARCHAR}, #{qrzxl,jdbcType=VARCHAR}, 
+      #{bysjOne,jdbcType=DATE}, #{sxzyOne,jdbcType=VARCHAR}, #{hqxl,jdbcType=VARCHAR}, 
+      #{hqxlsj,jdbcType=DATE}, #{sxsj,jdbcType=DATE}, #{zzdz,jdbcType=VARCHAR}, #{cym,jdbcType=VARCHAR}, 
+      #{sfzhm,jdbcType=VARCHAR}, #{byyxOne,jdbcType=VARCHAR}, #{sxzyTwo,jdbcType=VARCHAR}, 
+      #{byyxZz,jdbcType=VARCHAR}, #{hqxw,jdbcType=VARCHAR}, #{hqxwsj,jdbcType=DATE}, 
+      #{hqxwyx,jdbcType=VARCHAR}, #{hqxwzy,jdbcType=VARCHAR}, #{zzmm,jdbcType=DECIMAL}, 
+      #{hshdrd,jdbcType=VARCHAR}, #{cjgzsj,jdbcType=DATE}, #{lbdwsj,jdbcType=DATE}, #{zzzt,jdbcType=DECIMAL}, 
+      #{txsj,jdbcType=DATE}, #{dcsj,jdbcType=DATE}, #{bgsj,jdbcType=DATE}, #{swsj,jdbcType=DATE}, 
+      #{lxsj,jdbcType=DATE}, #{szks,jdbcType=VARCHAR}, #{yxzzw,jdbcType=VARCHAR}, #{zj,jdbcType=VARCHAR}, 
+      #{rxzsj,jdbcType=DATE}, #{rtzjsj,jdbcType=DATE}, #{zyjsxl,jdbcType=VARCHAR}, #{jszw,jdbcType=VARCHAR}, 
+      #{przt,jdbcType=DECIMAL}, #{prsj,jdbcType=DATE}, #{yhzg,jdbcType=VARCHAR}, #{zgqdsj,jdbcType=DATE}, 
+      #{jxjb,jdbcType=VARCHAR}, #{sssj,jdbcType=DATE}, #{jh,jdbcType=DECIMAL}, #{fd,jdbcType=DECIMAL}, 
+      #{xh,jdbcType=DECIMAL}, #{dah,jdbcType=VARCHAR}, #{gjjszgz,jdbcType=DECIMAL}, #{dazdw,jdbcType=DECIMAL}, 
+      #{grjl,jdbcType=VARCHAR}, #{tc,jdbcType=VARCHAR}, #{jtcy,jdbcType=VARCHAR}, #{czdz,jdbcType=VARCHAR}, 
+      #{czdzyb,jdbcType=VARCHAR}, #{zzdzyb,jdbcType=VARCHAR}, #{bgsdh,jdbcType=VARCHAR}, 
+      #{zzdh,jdbcType=VARCHAR}, #{chj,jdbcType=VARCHAR}, #{yddh,jdbcType=VARCHAR}, #{dzyx,jdbcType=VARCHAR}, 
+      #{gzlx,jdbcType=VARCHAR}, #{xzw,jdbcType=VARCHAR}, #{jb,jdbcType=VARCHAR}, #{zwgz,jdbcType=DECIMAL}, 
+      #{gzjb,jdbcType=VARCHAR}, #{gzzxsj,jdbcType=DATE}, #{gzdc,jdbcType=DECIMAL}, #{gze,jdbcType=VARCHAR}, 
+      #{jjsj,jdbcType=DATE}, #{ltsj,jdbcType=DATE}, #{bdsj,jdbcType=DATE}, #{jsdjgz,jdbcType=DECIMAL}, 
+      #{gwgzdc,jdbcType=DECIMAL}, #{gwgze,jdbcType=DECIMAL}, #{jdsj,jdbcType=DATE}, #{gw,jdbcType=VARCHAR}, 
+      #{gwdj,jdbcType=VARCHAR}, #{zjgwgze,jdbcType=DECIMAL}, #{xj,jdbcType=DECIMAL}, 
+      #{xjgze,jdbcType=DECIMAL}, #{jxjt,jdbcType=DECIMAL}, #{tgjt,jdbcType=DECIMAL}, 
+      #{bljt,jdbcType=DECIMAL}, #{zfbt,jdbcType=DECIMAL}, #{djqnf,jdbcType=DECIMAL}, 
+      #{khjc,jdbcType=VARCHAR}, #{ndkh,jdbcType=VARCHAR}, #{shbxh,jdbcType=VARCHAR}, 
+      #{shbxnr,jdbcType=VARCHAR}, #{jhsyzm,jdbcType=DECIMAL}, #{pxz,jdbcType=VARCHAR}, 
+      #{bz,jdbcType=VARCHAR}, #{zxsj,jdbcType=DATE}, #{bzTwo,jdbcType=VARCHAR}, #{yjxbz,jdbcType=DECIMAL}, 
+      #{xjxbz,jdbcType=DECIMAL}, #{zxsjOne,jdbcType=DATE}, #{lb,jdbcType=VARCHAR}, #{ssjb,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.yunzainfo.pitcher.plugin.hr.entity.PersonalRecords">
+    insert into PERSONAL_RECORDS
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        ID,
+      </if>
+      <if test="deptId != null">
+        DEPT_ID,
+      </if>
+      <if test="xm != null">
+        XM,
+      </if>
+      <if test="sex != null">
+        SEX,
+      </if>
+      <if test="sf != null">
+        SF,
+      </if>
+      <if test="csrq != null">
+        CSRQ,
+      </if>
+      <if test="mz != null">
+        MZ,
+      </if>
+      <if test="jg != null">
+        JG,
+      </if>
+      <if test="zgxl != null">
+        ZGXL,
+      </if>
+      <if test="xw != null">
+        XW,
+      </if>
+      <if test="qrzxl != null">
+        QRZXL,
+      </if>
+      <if test="bysjOne != null">
+        BYSJ_ONE,
+      </if>
+      <if test="sxzyOne != null">
+        SXZY_ONE,
+      </if>
+      <if test="hqxl != null">
+        HQXL,
+      </if>
+      <if test="hqxlsj != null">
+        HQXLSJ,
+      </if>
+      <if test="sxsj != null">
+        SXSJ,
+      </if>
+      <if test="zzdz != null">
+        ZZDZ,
+      </if>
+      <if test="cym != null">
+        CYM,
+      </if>
+      <if test="sfzhm != null">
+        SFZHM,
+      </if>
+      <if test="byyxOne != null">
+        BYYX_ONE,
+      </if>
+      <if test="sxzyTwo != null">
+        SXZY_TWO,
+      </if>
+      <if test="byyxZz != null">
+        BYYX_ZZ,
+      </if>
+      <if test="hqxw != null">
+        HQXW,
+      </if>
+      <if test="hqxwsj != null">
+        HQXWSJ,
+      </if>
+      <if test="hqxwyx != null">
+        HQXWYX,
+      </if>
+      <if test="hqxwzy != null">
+        HQXWZY,
+      </if>
+      <if test="zzmm != null">
+        ZZMM,
+      </if>
+      <if test="hshdrd != null">
+        HSHDRD,
+      </if>
+      <if test="cjgzsj != null">
+        CJGZSJ,
+      </if>
+      <if test="lbdwsj != null">
+        LBDWSJ,
+      </if>
+      <if test="zzzt != null">
+        ZZZT,
+      </if>
+      <if test="txsj != null">
+        TXSJ,
+      </if>
+      <if test="dcsj != null">
+        DCSJ,
+      </if>
+      <if test="bgsj != null">
+        BGSJ,
+      </if>
+      <if test="swsj != null">
+        SWSJ,
+      </if>
+      <if test="lxsj != null">
+        LXSJ,
+      </if>
+      <if test="szks != null">
+        SZKS,
+      </if>
+      <if test="yxzzw != null">
+        YXZZW,
+      </if>
+      <if test="zj != null">
+        ZJ,
+      </if>
+      <if test="rxzsj != null">
+        RXZSJ,
+      </if>
+      <if test="rtzjsj != null">
+        RTZJSJ,
+      </if>
+      <if test="zyjsxl != null">
+        ZYJSXL,
+      </if>
+      <if test="jszw != null">
+        JSZW,
+      </if>
+      <if test="przt != null">
+        PRZT,
+      </if>
+      <if test="prsj != null">
+        PRSJ,
+      </if>
+      <if test="yhzg != null">
+        YHZG,
+      </if>
+      <if test="zgqdsj != null">
+        ZGQDSJ,
+      </if>
+      <if test="jxjb != null">
+        JXJB,
+      </if>
+      <if test="sssj != null">
+        SSSJ,
+      </if>
+      <if test="jh != null">
+        JH,
+      </if>
+      <if test="fd != null">
+        FD,
+      </if>
+      <if test="xh != null">
+        XH,
+      </if>
+      <if test="dah != null">
+        DAH,
+      </if>
+      <if test="gjjszgz != null">
+        GJJSZGZ,
+      </if>
+      <if test="dazdw != null">
+        DAZDW,
+      </if>
+      <if test="grjl != null">
+        GRJL,
+      </if>
+      <if test="tc != null">
+        TC,
+      </if>
+      <if test="jtcy != null">
+        JTCY,
+      </if>
+      <if test="czdz != null">
+        CZDZ,
+      </if>
+      <if test="czdzyb != null">
+        CZDZYB,
+      </if>
+      <if test="zzdzyb != null">
+        ZZDZYB,
+      </if>
+      <if test="bgsdh != null">
+        BGSDH,
+      </if>
+      <if test="zzdh != null">
+        ZZDH,
+      </if>
+      <if test="chj != null">
+        CHJ,
+      </if>
+      <if test="yddh != null">
+        YDDH,
+      </if>
+      <if test="dzyx != null">
+        DZYX,
+      </if>
+      <if test="gzlx != null">
+        GZLX,
+      </if>
+      <if test="xzw != null">
+        XZW,
+      </if>
+      <if test="jb != null">
+        JB,
+      </if>
+      <if test="zwgz != null">
+        ZWGZ,
+      </if>
+      <if test="gzjb != null">
+        GZJB,
+      </if>
+      <if test="gzzxsj != null">
+        GZZXSJ,
+      </if>
+      <if test="gzdc != null">
+        GZDC,
+      </if>
+      <if test="gze != null">
+        GZE,
+      </if>
+      <if test="jjsj != null">
+        JJSJ,
+      </if>
+      <if test="ltsj != null">
+        LTSJ,
+      </if>
+      <if test="bdsj != null">
+        BDSJ,
+      </if>
+      <if test="jsdjgz != null">
+        JSDJGZ,
+      </if>
+      <if test="gwgzdc != null">
+        GWGZDC,
+      </if>
+      <if test="gwgze != null">
+        GWGZE,
+      </if>
+      <if test="jdsj != null">
+        JDSJ,
+      </if>
+      <if test="gw != null">
+        GW,
+      </if>
+      <if test="gwdj != null">
+        GWDJ,
+      </if>
+      <if test="zjgwgze != null">
+        ZJGWGZE,
+      </if>
+      <if test="xj != null">
+        XJ,
+      </if>
+      <if test="xjgze != null">
+        XJGZE,
+      </if>
+      <if test="jxjt != null">
+        JXJT,
+      </if>
+      <if test="tgjt != null">
+        TGJT,
+      </if>
+      <if test="bljt != null">
+        BLJT,
+      </if>
+      <if test="zfbt != null">
+        ZFBT,
+      </if>
+      <if test="djqnf != null">
+        DJQNF,
+      </if>
+      <if test="khjc != null">
+        KHJC,
+      </if>
+      <if test="ndkh != null">
+        NDKH,
+      </if>
+      <if test="shbxh != null">
+        SHBXH,
+      </if>
+      <if test="shbxnr != null">
+        SHBXNR,
+      </if>
+      <if test="jhsyzm != null">
+        JHSYZM,
+      </if>
+      <if test="pxz != null">
+        PXZ,
+      </if>
+      <if test="bz != null">
+        BZ,
+      </if>
+      <if test="zxsj != null">
+        ZXSJ,
+      </if>
+      <if test="bzTwo != null">
+        BZ_TWO,
+      </if>
+      <if test="yjxbz != null">
+        YJXBZ,
+      </if>
+      <if test="xjxbz != null">
+        XJXBZ,
+      </if>
+      <if test="zxsjOne != null">
+        ZXSJ_ONE,
+      </if>
+      <if test="lb != null">
+        LB,
+      </if>
+      <if test="ssjb != null">
+        SSJB,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="deptId != null">
+        #{deptId,jdbcType=VARCHAR},
+      </if>
+      <if test="xm != null">
+        #{xm,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        #{sex,jdbcType=DECIMAL},
+      </if>
+      <if test="sf != null">
+        #{sf,jdbcType=VARCHAR},
+      </if>
+      <if test="csrq != null">
+        #{csrq,jdbcType=DATE},
+      </if>
+      <if test="mz != null">
+        #{mz,jdbcType=VARCHAR},
+      </if>
+      <if test="jg != null">
+        #{jg,jdbcType=VARCHAR},
+      </if>
+      <if test="zgxl != null">
+        #{zgxl,jdbcType=VARCHAR},
+      </if>
+      <if test="xw != null">
+        #{xw,jdbcType=VARCHAR},
+      </if>
+      <if test="qrzxl != null">
+        #{qrzxl,jdbcType=VARCHAR},
+      </if>
+      <if test="bysjOne != null">
+        #{bysjOne,jdbcType=DATE},
+      </if>
+      <if test="sxzyOne != null">
+        #{sxzyOne,jdbcType=VARCHAR},
+      </if>
+      <if test="hqxl != null">
+        #{hqxl,jdbcType=VARCHAR},
+      </if>
+      <if test="hqxlsj != null">
+        #{hqxlsj,jdbcType=DATE},
+      </if>
+      <if test="sxsj != null">
+        #{sxsj,jdbcType=DATE},
+      </if>
+      <if test="zzdz != null">
+        #{zzdz,jdbcType=VARCHAR},
+      </if>
+      <if test="cym != null">
+        #{cym,jdbcType=VARCHAR},
+      </if>
+      <if test="sfzhm != null">
+        #{sfzhm,jdbcType=VARCHAR},
+      </if>
+      <if test="byyxOne != null">
+        #{byyxOne,jdbcType=VARCHAR},
+      </if>
+      <if test="sxzyTwo != null">
+        #{sxzyTwo,jdbcType=VARCHAR},
+      </if>
+      <if test="byyxZz != null">
+        #{byyxZz,jdbcType=VARCHAR},
+      </if>
+      <if test="hqxw != null">
+        #{hqxw,jdbcType=VARCHAR},
+      </if>
+      <if test="hqxwsj != null">
+        #{hqxwsj,jdbcType=DATE},
+      </if>
+      <if test="hqxwyx != null">
+        #{hqxwyx,jdbcType=VARCHAR},
+      </if>
+      <if test="hqxwzy != null">
+        #{hqxwzy,jdbcType=VARCHAR},
+      </if>
+      <if test="zzmm != null">
+        #{zzmm,jdbcType=DECIMAL},
+      </if>
+      <if test="hshdrd != null">
+        #{hshdrd,jdbcType=VARCHAR},
+      </if>
+      <if test="cjgzsj != null">
+        #{cjgzsj,jdbcType=DATE},
+      </if>
+      <if test="lbdwsj != null">
+        #{lbdwsj,jdbcType=DATE},
+      </if>
+      <if test="zzzt != null">
+        #{zzzt,jdbcType=DECIMAL},
+      </if>
+      <if test="txsj != null">
+        #{txsj,jdbcType=DATE},
+      </if>
+      <if test="dcsj != null">
+        #{dcsj,jdbcType=DATE},
+      </if>
+      <if test="bgsj != null">
+        #{bgsj,jdbcType=DATE},
+      </if>
+      <if test="swsj != null">
+        #{swsj,jdbcType=DATE},
+      </if>
+      <if test="lxsj != null">
+        #{lxsj,jdbcType=DATE},
+      </if>
+      <if test="szks != null">
+        #{szks,jdbcType=VARCHAR},
+      </if>
+      <if test="yxzzw != null">
+        #{yxzzw,jdbcType=VARCHAR},
+      </if>
+      <if test="zj != null">
+        #{zj,jdbcType=VARCHAR},
+      </if>
+      <if test="rxzsj != null">
+        #{rxzsj,jdbcType=DATE},
+      </if>
+      <if test="rtzjsj != null">
+        #{rtzjsj,jdbcType=DATE},
+      </if>
+      <if test="zyjsxl != null">
+        #{zyjsxl,jdbcType=VARCHAR},
+      </if>
+      <if test="jszw != null">
+        #{jszw,jdbcType=VARCHAR},
+      </if>
+      <if test="przt != null">
+        #{przt,jdbcType=DECIMAL},
+      </if>
+      <if test="prsj != null">
+        #{prsj,jdbcType=DATE},
+      </if>
+      <if test="yhzg != null">
+        #{yhzg,jdbcType=VARCHAR},
+      </if>
+      <if test="zgqdsj != null">
+        #{zgqdsj,jdbcType=DATE},
+      </if>
+      <if test="jxjb != null">
+        #{jxjb,jdbcType=VARCHAR},
+      </if>
+      <if test="sssj != null">
+        #{sssj,jdbcType=DATE},
+      </if>
+      <if test="jh != null">
+        #{jh,jdbcType=DECIMAL},
+      </if>
+      <if test="fd != null">
+        #{fd,jdbcType=DECIMAL},
+      </if>
+      <if test="xh != null">
+        #{xh,jdbcType=DECIMAL},
+      </if>
+      <if test="dah != null">
+        #{dah,jdbcType=VARCHAR},
+      </if>
+      <if test="gjjszgz != null">
+        #{gjjszgz,jdbcType=DECIMAL},
+      </if>
+      <if test="dazdw != null">
+        #{dazdw,jdbcType=DECIMAL},
+      </if>
+      <if test="grjl != null">
+        #{grjl,jdbcType=VARCHAR},
+      </if>
+      <if test="tc != null">
+        #{tc,jdbcType=VARCHAR},
+      </if>
+      <if test="jtcy != null">
+        #{jtcy,jdbcType=VARCHAR},
+      </if>
+      <if test="czdz != null">
+        #{czdz,jdbcType=VARCHAR},
+      </if>
+      <if test="czdzyb != null">
+        #{czdzyb,jdbcType=VARCHAR},
+      </if>
+      <if test="zzdzyb != null">
+        #{zzdzyb,jdbcType=VARCHAR},
+      </if>
+      <if test="bgsdh != null">
+        #{bgsdh,jdbcType=VARCHAR},
+      </if>
+      <if test="zzdh != null">
+        #{zzdh,jdbcType=VARCHAR},
+      </if>
+      <if test="chj != null">
+        #{chj,jdbcType=VARCHAR},
+      </if>
+      <if test="yddh != null">
+        #{yddh,jdbcType=VARCHAR},
+      </if>
+      <if test="dzyx != null">
+        #{dzyx,jdbcType=VARCHAR},
+      </if>
+      <if test="gzlx != null">
+        #{gzlx,jdbcType=VARCHAR},
+      </if>
+      <if test="xzw != null">
+        #{xzw,jdbcType=VARCHAR},
+      </if>
+      <if test="jb != null">
+        #{jb,jdbcType=VARCHAR},
+      </if>
+      <if test="zwgz != null">
+        #{zwgz,jdbcType=DECIMAL},
+      </if>
+      <if test="gzjb != null">
+        #{gzjb,jdbcType=VARCHAR},
+      </if>
+      <if test="gzzxsj != null">
+        #{gzzxsj,jdbcType=DATE},
+      </if>
+      <if test="gzdc != null">
+        #{gzdc,jdbcType=DECIMAL},
+      </if>
+      <if test="gze != null">
+        #{gze,jdbcType=VARCHAR},
+      </if>
+      <if test="jjsj != null">
+        #{jjsj,jdbcType=DATE},
+      </if>
+      <if test="ltsj != null">
+        #{ltsj,jdbcType=DATE},
+      </if>
+      <if test="bdsj != null">
+        #{bdsj,jdbcType=DATE},
+      </if>
+      <if test="jsdjgz != null">
+        #{jsdjgz,jdbcType=DECIMAL},
+      </if>
+      <if test="gwgzdc != null">
+        #{gwgzdc,jdbcType=DECIMAL},
+      </if>
+      <if test="gwgze != null">
+        #{gwgze,jdbcType=DECIMAL},
+      </if>
+      <if test="jdsj != null">
+        #{jdsj,jdbcType=DATE},
+      </if>
+      <if test="gw != null">
+        #{gw,jdbcType=VARCHAR},
+      </if>
+      <if test="gwdj != null">
+        #{gwdj,jdbcType=VARCHAR},
+      </if>
+      <if test="zjgwgze != null">
+        #{zjgwgze,jdbcType=DECIMAL},
+      </if>
+      <if test="xj != null">
+        #{xj,jdbcType=DECIMAL},
+      </if>
+      <if test="xjgze != null">
+        #{xjgze,jdbcType=DECIMAL},
+      </if>
+      <if test="jxjt != null">
+        #{jxjt,jdbcType=DECIMAL},
+      </if>
+      <if test="tgjt != null">
+        #{tgjt,jdbcType=DECIMAL},
+      </if>
+      <if test="bljt != null">
+        #{bljt,jdbcType=DECIMAL},
+      </if>
+      <if test="zfbt != null">
+        #{zfbt,jdbcType=DECIMAL},
+      </if>
+      <if test="djqnf != null">
+        #{djqnf,jdbcType=DECIMAL},
+      </if>
+      <if test="khjc != null">
+        #{khjc,jdbcType=VARCHAR},
+      </if>
+      <if test="ndkh != null">
+        #{ndkh,jdbcType=VARCHAR},
+      </if>
+      <if test="shbxh != null">
+        #{shbxh,jdbcType=VARCHAR},
+      </if>
+      <if test="shbxnr != null">
+        #{shbxnr,jdbcType=VARCHAR},
+      </if>
+      <if test="jhsyzm != null">
+        #{jhsyzm,jdbcType=DECIMAL},
+      </if>
+      <if test="pxz != null">
+        #{pxz,jdbcType=VARCHAR},
+      </if>
+      <if test="bz != null">
+        #{bz,jdbcType=VARCHAR},
+      </if>
+      <if test="zxsj != null">
+        #{zxsj,jdbcType=DATE},
+      </if>
+      <if test="bzTwo != null">
+        #{bzTwo,jdbcType=VARCHAR},
+      </if>
+      <if test="yjxbz != null">
+        #{yjxbz,jdbcType=DECIMAL},
+      </if>
+      <if test="xjxbz != null">
+        #{xjxbz,jdbcType=DECIMAL},
+      </if>
+      <if test="zxsjOne != null">
+        #{zxsjOne,jdbcType=DATE},
+      </if>
+      <if test="lb != null">
+        #{lb,jdbcType=VARCHAR},
+      </if>
+      <if test="ssjb != null">
+        #{ssjb,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <resultMap id="BaseResultMap" type="com.yunzainfo.pitcher.plugin.hr.entity.PersonalRecords">
+    <result column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="DEPT_ID" jdbcType="VARCHAR" property="deptId" />
+    <result column="XM" jdbcType="VARCHAR" property="xm" />
+    <result column="SEX" jdbcType="DECIMAL" property="sex" />
+    <result column="SF" jdbcType="VARCHAR" property="sf" />
+    <result column="CSRQ" jdbcType="DATE" property="csrq" />
+    <result column="MZ" jdbcType="VARCHAR" property="mz" />
+    <result column="JG" jdbcType="VARCHAR" property="jg" />
+    <result column="ZGXL" jdbcType="VARCHAR" property="zgxl" />
+    <result column="XW" jdbcType="VARCHAR" property="xw" />
+    <result column="QRZXL" jdbcType="VARCHAR" property="qrzxl" />
+    <result column="BYSJ_ONE" jdbcType="DATE" property="bysjOne" />
+    <result column="SXZY_ONE" jdbcType="VARCHAR" property="sxzyOne" />
+    <result column="HQXL" jdbcType="VARCHAR" property="hqxl" />
+    <result column="HQXLSJ" jdbcType="DATE" property="hqxlsj" />
+    <result column="SXSJ" jdbcType="DATE" property="sxsj" />
+    <result column="ZZDZ" jdbcType="VARCHAR" property="zzdz" />
+    <result column="CYM" jdbcType="VARCHAR" property="cym" />
+    <result column="SFZHM" jdbcType="VARCHAR" property="sfzhm" />
+    <result column="BYYX_ONE" jdbcType="VARCHAR" property="byyxOne" />
+    <result column="SXZY_TWO" jdbcType="VARCHAR" property="sxzyTwo" />
+    <result column="BYYX_ZZ" jdbcType="VARCHAR" property="byyxZz" />
+    <result column="HQXW" jdbcType="VARCHAR" property="hqxw" />
+    <result column="HQXWSJ" jdbcType="DATE" property="hqxwsj" />
+    <result column="HQXWYX" jdbcType="VARCHAR" property="hqxwyx" />
+    <result column="HQXWZY" jdbcType="VARCHAR" property="hqxwzy" />
+    <result column="ZZMM" jdbcType="DECIMAL" property="zzmm" />
+    <result column="HSHDRD" jdbcType="VARCHAR" property="hshdrd" />
+    <result column="CJGZSJ" jdbcType="DATE" property="cjgzsj" />
+    <result column="LBDWSJ" jdbcType="DATE" property="lbdwsj" />
+    <result column="ZZZT" jdbcType="DECIMAL" property="zzzt" />
+    <result column="TXSJ" jdbcType="DATE" property="txsj" />
+    <result column="DCSJ" jdbcType="DATE" property="dcsj" />
+    <result column="BGSJ" jdbcType="DATE" property="bgsj" />
+    <result column="SWSJ" jdbcType="DATE" property="swsj" />
+    <result column="LXSJ" jdbcType="DATE" property="lxsj" />
+    <result column="SZKS" jdbcType="VARCHAR" property="szks" />
+    <result column="YXZZW" jdbcType="VARCHAR" property="yxzzw" />
+    <result column="ZJ" jdbcType="VARCHAR" property="zj" />
+    <result column="RXZSJ" jdbcType="DATE" property="rxzsj" />
+    <result column="RTZJSJ" jdbcType="DATE" property="rtzjsj" />
+    <result column="ZYJSXL" jdbcType="VARCHAR" property="zyjsxl" />
+    <result column="JSZW" jdbcType="VARCHAR" property="jszw" />
+    <result column="PRZT" jdbcType="DECIMAL" property="przt" />
+    <result column="PRSJ" jdbcType="DATE" property="prsj" />
+    <result column="YHZG" jdbcType="VARCHAR" property="yhzg" />
+    <result column="ZGQDSJ" jdbcType="DATE" property="zgqdsj" />
+    <result column="JXJB" jdbcType="VARCHAR" property="jxjb" />
+    <result column="SSSJ" jdbcType="DATE" property="sssj" />
+    <result column="JH" jdbcType="DECIMAL" property="jh" />
+    <result column="FD" jdbcType="DECIMAL" property="fd" />
+    <result column="XH" jdbcType="DECIMAL" property="xh" />
+    <result column="DAH" jdbcType="VARCHAR" property="dah" />
+    <result column="GJJSZGZ" jdbcType="DECIMAL" property="gjjszgz" />
+    <result column="DAZDW" jdbcType="DECIMAL" property="dazdw" />
+    <result column="GRJL" jdbcType="VARCHAR" property="grjl" />
+    <result column="TC" jdbcType="VARCHAR" property="tc" />
+    <result column="JTCY" jdbcType="VARCHAR" property="jtcy" />
+    <result column="CZDZ" jdbcType="VARCHAR" property="czdz" />
+    <result column="CZDZYB" jdbcType="VARCHAR" property="czdzyb" />
+    <result column="ZZDZYB" jdbcType="VARCHAR" property="zzdzyb" />
+    <result column="BGSDH" jdbcType="VARCHAR" property="bgsdh" />
+    <result column="ZZDH" jdbcType="VARCHAR" property="zzdh" />
+    <result column="CHJ" jdbcType="VARCHAR" property="chj" />
+    <result column="YDDH" jdbcType="VARCHAR" property="yddh" />
+    <result column="DZYX" jdbcType="VARCHAR" property="dzyx" />
+    <result column="GZLX" jdbcType="VARCHAR" property="gzlx" />
+    <result column="XZW" jdbcType="VARCHAR" property="xzw" />
+    <result column="JB" jdbcType="VARCHAR" property="jb" />
+    <result column="ZWGZ" jdbcType="DECIMAL" property="zwgz" />
+    <result column="GZJB" jdbcType="VARCHAR" property="gzjb" />
+    <result column="GZZXSJ" jdbcType="DATE" property="gzzxsj" />
+    <result column="GZDC" jdbcType="DECIMAL" property="gzdc" />
+    <result column="GZE" jdbcType="VARCHAR" property="gze" />
+    <result column="JJSJ" jdbcType="DATE" property="jjsj" />
+    <result column="LTSJ" jdbcType="DATE" property="ltsj" />
+    <result column="BDSJ" jdbcType="DATE" property="bdsj" />
+    <result column="JSDJGZ" jdbcType="DECIMAL" property="jsdjgz" />
+    <result column="GWGZDC" jdbcType="DECIMAL" property="gwgzdc" />
+    <result column="GWGZE" jdbcType="DECIMAL" property="gwgze" />
+    <result column="JDSJ" jdbcType="DATE" property="jdsj" />
+    <result column="GW" jdbcType="VARCHAR" property="gw" />
+    <result column="GWDJ" jdbcType="VARCHAR" property="gwdj" />
+    <result column="ZJGWGZE" jdbcType="DECIMAL" property="zjgwgze" />
+    <result column="XJ" jdbcType="DECIMAL" property="xj" />
+    <result column="XJGZE" jdbcType="DECIMAL" property="xjgze" />
+    <result column="JXJT" jdbcType="DECIMAL" property="jxjt" />
+    <result column="TGJT" jdbcType="DECIMAL" property="tgjt" />
+    <result column="BLJT" jdbcType="DECIMAL" property="bljt" />
+    <result column="ZFBT" jdbcType="DECIMAL" property="zfbt" />
+    <result column="DJQNF" jdbcType="DECIMAL" property="djqnf" />
+    <result column="KHJC" jdbcType="VARCHAR" property="khjc" />
+    <result column="NDKH" jdbcType="VARCHAR" property="ndkh" />
+    <result column="SHBXH" jdbcType="VARCHAR" property="shbxh" />
+    <result column="SHBXNR" jdbcType="VARCHAR" property="shbxnr" />
+    <result column="JHSYZM" jdbcType="DECIMAL" property="jhsyzm" />
+    <result column="PXZ" jdbcType="VARCHAR" property="pxz" />
+    <result column="BZ" jdbcType="VARCHAR" property="bz" />
+    <result column="ZXSJ" jdbcType="DATE" property="zxsj" />
+    <result column="BZ_TWO" jdbcType="VARCHAR" property="bzTwo" />
+    <result column="YJXBZ" jdbcType="DECIMAL" property="yjxbz" />
+    <result column="XJXBZ" jdbcType="DECIMAL" property="xjxbz" />
+    <result column="ZXSJ_ONE" jdbcType="DATE" property="zxsjOne" />
+    <result column="LB" jdbcType="VARCHAR" property="lb" />
+    <result column="SSJB" jdbcType="VARCHAR" property="ssjb" />
+  </resultMap>
+  <insert id="insert" parameterType="com.yunzainfo.pitcher.plugin.hr.entity.PersonalRecords">
+    insert into PERSONAL_RECORDS (ID, DEPT_ID, XM, 
+      SEX, SF, CSRQ, MZ, 
+      JG, ZGXL, XW, QRZXL, 
+      BYSJ_ONE, SXZY_ONE, HQXL, 
+      HQXLSJ, SXSJ, ZZDZ, CYM, 
+      SFZHM, BYYX_ONE, SXZY_TWO, 
+      BYYX_ZZ, HQXW, HQXWSJ, 
+      HQXWYX, HQXWZY, ZZMM, 
+      HSHDRD, CJGZSJ, LBDWSJ, ZZZT, 
+      TXSJ, DCSJ, BGSJ, SWSJ, 
+      LXSJ, SZKS, YXZZW, ZJ, 
+      RXZSJ, RTZJSJ, ZYJSXL, JSZW, 
+      PRZT, PRSJ, YHZG, ZGQDSJ, 
+      JXJB, SSSJ, JH, FD, 
+      XH, DAH, GJJSZGZ, DAZDW, 
+      GRJL, TC, JTCY, CZDZ, 
+      CZDZYB, ZZDZYB, BGSDH, 
+      ZZDH, CHJ, YDDH, DZYX, 
+      GZLX, XZW, JB, ZWGZ, 
+      GZJB, GZZXSJ, GZDC, GZE, 
+      JJSJ, LTSJ, BDSJ, JSDJGZ, 
+      GWGZDC, GWGZE, JDSJ, GW, 
+      GWDJ, ZJGWGZE, XJ, 
+      XJGZE, JXJT, TGJT, 
+      BLJT, ZFBT, DJQNF, 
+      KHJC, NDKH, SHBXH, 
+      SHBXNR, JHSYZM, PXZ, 
+      BZ, ZXSJ, BZ_TWO, YJXBZ, 
+      XJXBZ, ZXSJ_ONE, LB, SSJB
+      )
+    values (#{id,jdbcType=VARCHAR}, #{deptId,jdbcType=VARCHAR}, #{xm,jdbcType=VARCHAR}, 
+      #{sex,jdbcType=DECIMAL}, #{sf,jdbcType=VARCHAR}, #{csrq,jdbcType=DATE}, #{mz,jdbcType=VARCHAR}, 
+      #{jg,jdbcType=VARCHAR}, #{zgxl,jdbcType=VARCHAR}, #{xw,jdbcType=VARCHAR}, #{qrzxl,jdbcType=VARCHAR}, 
+      #{bysjOne,jdbcType=DATE}, #{sxzyOne,jdbcType=VARCHAR}, #{hqxl,jdbcType=VARCHAR}, 
+      #{hqxlsj,jdbcType=DATE}, #{sxsj,jdbcType=DATE}, #{zzdz,jdbcType=VARCHAR}, #{cym,jdbcType=VARCHAR}, 
+      #{sfzhm,jdbcType=VARCHAR}, #{byyxOne,jdbcType=VARCHAR}, #{sxzyTwo,jdbcType=VARCHAR}, 
+      #{byyxZz,jdbcType=VARCHAR}, #{hqxw,jdbcType=VARCHAR}, #{hqxwsj,jdbcType=DATE}, 
+      #{hqxwyx,jdbcType=VARCHAR}, #{hqxwzy,jdbcType=VARCHAR}, #{zzmm,jdbcType=DECIMAL}, 
+      #{hshdrd,jdbcType=VARCHAR}, #{cjgzsj,jdbcType=DATE}, #{lbdwsj,jdbcType=DATE}, #{zzzt,jdbcType=DECIMAL}, 
+      #{txsj,jdbcType=DATE}, #{dcsj,jdbcType=DATE}, #{bgsj,jdbcType=DATE}, #{swsj,jdbcType=DATE}, 
+      #{lxsj,jdbcType=DATE}, #{szks,jdbcType=VARCHAR}, #{yxzzw,jdbcType=VARCHAR}, #{zj,jdbcType=VARCHAR}, 
+      #{rxzsj,jdbcType=DATE}, #{rtzjsj,jdbcType=DATE}, #{zyjsxl,jdbcType=VARCHAR}, #{jszw,jdbcType=VARCHAR}, 
+      #{przt,jdbcType=DECIMAL}, #{prsj,jdbcType=DATE}, #{yhzg,jdbcType=VARCHAR}, #{zgqdsj,jdbcType=DATE}, 
+      #{jxjb,jdbcType=VARCHAR}, #{sssj,jdbcType=DATE}, #{jh,jdbcType=DECIMAL}, #{fd,jdbcType=DECIMAL}, 
+      #{xh,jdbcType=DECIMAL}, #{dah,jdbcType=VARCHAR}, #{gjjszgz,jdbcType=DECIMAL}, #{dazdw,jdbcType=DECIMAL}, 
+      #{grjl,jdbcType=VARCHAR}, #{tc,jdbcType=VARCHAR}, #{jtcy,jdbcType=VARCHAR}, #{czdz,jdbcType=VARCHAR}, 
+      #{czdzyb,jdbcType=VARCHAR}, #{zzdzyb,jdbcType=VARCHAR}, #{bgsdh,jdbcType=VARCHAR}, 
+      #{zzdh,jdbcType=VARCHAR}, #{chj,jdbcType=VARCHAR}, #{yddh,jdbcType=VARCHAR}, #{dzyx,jdbcType=VARCHAR}, 
+      #{gzlx,jdbcType=VARCHAR}, #{xzw,jdbcType=VARCHAR}, #{jb,jdbcType=VARCHAR}, #{zwgz,jdbcType=DECIMAL}, 
+      #{gzjb,jdbcType=VARCHAR}, #{gzzxsj,jdbcType=DATE}, #{gzdc,jdbcType=DECIMAL}, #{gze,jdbcType=VARCHAR}, 
+      #{jjsj,jdbcType=DATE}, #{ltsj,jdbcType=DATE}, #{bdsj,jdbcType=DATE}, #{jsdjgz,jdbcType=DECIMAL}, 
+      #{gwgzdc,jdbcType=DECIMAL}, #{gwgze,jdbcType=DECIMAL}, #{jdsj,jdbcType=DATE}, #{gw,jdbcType=VARCHAR}, 
+      #{gwdj,jdbcType=VARCHAR}, #{zjgwgze,jdbcType=DECIMAL}, #{xj,jdbcType=DECIMAL}, 
+      #{xjgze,jdbcType=DECIMAL}, #{jxjt,jdbcType=DECIMAL}, #{tgjt,jdbcType=DECIMAL}, 
+      #{bljt,jdbcType=DECIMAL}, #{zfbt,jdbcType=DECIMAL}, #{djqnf,jdbcType=DECIMAL}, 
+      #{khjc,jdbcType=VARCHAR}, #{ndkh,jdbcType=VARCHAR}, #{shbxh,jdbcType=VARCHAR}, 
+      #{shbxnr,jdbcType=VARCHAR}, #{jhsyzm,jdbcType=DECIMAL}, #{pxz,jdbcType=VARCHAR}, 
+      #{bz,jdbcType=VARCHAR}, #{zxsj,jdbcType=DATE}, #{bzTwo,jdbcType=VARCHAR}, #{yjxbz,jdbcType=DECIMAL}, 
+      #{xjxbz,jdbcType=DECIMAL}, #{zxsjOne,jdbcType=DATE}, #{lb,jdbcType=VARCHAR}, #{ssjb,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.yunzainfo.pitcher.plugin.hr.entity.PersonalRecords">
+    insert into PERSONAL_RECORDS
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        ID,
+      </if>
+      <if test="deptId != null">
+        DEPT_ID,
+      </if>
+      <if test="xm != null">
+        XM,
+      </if>
+      <if test="sex != null">
+        SEX,
+      </if>
+      <if test="sf != null">
+        SF,
+      </if>
+      <if test="csrq != null">
+        CSRQ,
+      </if>
+      <if test="mz != null">
+        MZ,
+      </if>
+      <if test="jg != null">
+        JG,
+      </if>
+      <if test="zgxl != null">
+        ZGXL,
+      </if>
+      <if test="xw != null">
+        XW,
+      </if>
+      <if test="qrzxl != null">
+        QRZXL,
+      </if>
+      <if test="bysjOne != null">
+        BYSJ_ONE,
+      </if>
+      <if test="sxzyOne != null">
+        SXZY_ONE,
+      </if>
+      <if test="hqxl != null">
+        HQXL,
+      </if>
+      <if test="hqxlsj != null">
+        HQXLSJ,
+      </if>
+      <if test="sxsj != null">
+        SXSJ,
+      </if>
+      <if test="zzdz != null">
+        ZZDZ,
+      </if>
+      <if test="cym != null">
+        CYM,
+      </if>
+      <if test="sfzhm != null">
+        SFZHM,
+      </if>
+      <if test="byyxOne != null">
+        BYYX_ONE,
+      </if>
+      <if test="sxzyTwo != null">
+        SXZY_TWO,
+      </if>
+      <if test="byyxZz != null">
+        BYYX_ZZ,
+      </if>
+      <if test="hqxw != null">
+        HQXW,
+      </if>
+      <if test="hqxwsj != null">
+        HQXWSJ,
+      </if>
+      <if test="hqxwyx != null">
+        HQXWYX,
+      </if>
+      <if test="hqxwzy != null">
+        HQXWZY,
+      </if>
+      <if test="zzmm != null">
+        ZZMM,
+      </if>
+      <if test="hshdrd != null">
+        HSHDRD,
+      </if>
+      <if test="cjgzsj != null">
+        CJGZSJ,
+      </if>
+      <if test="lbdwsj != null">
+        LBDWSJ,
+      </if>
+      <if test="zzzt != null">
+        ZZZT,
+      </if>
+      <if test="txsj != null">
+        TXSJ,
+      </if>
+      <if test="dcsj != null">
+        DCSJ,
+      </if>
+      <if test="bgsj != null">
+        BGSJ,
+      </if>
+      <if test="swsj != null">
+        SWSJ,
+      </if>
+      <if test="lxsj != null">
+        LXSJ,
+      </if>
+      <if test="szks != null">
+        SZKS,
+      </if>
+      <if test="yxzzw != null">
+        YXZZW,
+      </if>
+      <if test="zj != null">
+        ZJ,
+      </if>
+      <if test="rxzsj != null">
+        RXZSJ,
+      </if>
+      <if test="rtzjsj != null">
+        RTZJSJ,
+      </if>
+      <if test="zyjsxl != null">
+        ZYJSXL,
+      </if>
+      <if test="jszw != null">
+        JSZW,
+      </if>
+      <if test="przt != null">
+        PRZT,
+      </if>
+      <if test="prsj != null">
+        PRSJ,
+      </if>
+      <if test="yhzg != null">
+        YHZG,
+      </if>
+      <if test="zgqdsj != null">
+        ZGQDSJ,
+      </if>
+      <if test="jxjb != null">
+        JXJB,
+      </if>
+      <if test="sssj != null">
+        SSSJ,
+      </if>
+      <if test="jh != null">
+        JH,
+      </if>
+      <if test="fd != null">
+        FD,
+      </if>
+      <if test="xh != null">
+        XH,
+      </if>
+      <if test="dah != null">
+        DAH,
+      </if>
+      <if test="gjjszgz != null">
+        GJJSZGZ,
+      </if>
+      <if test="dazdw != null">
+        DAZDW,
+      </if>
+      <if test="grjl != null">
+        GRJL,
+      </if>
+      <if test="tc != null">
+        TC,
+      </if>
+      <if test="jtcy != null">
+        JTCY,
+      </if>
+      <if test="czdz != null">
+        CZDZ,
+      </if>
+      <if test="czdzyb != null">
+        CZDZYB,
+      </if>
+      <if test="zzdzyb != null">
+        ZZDZYB,
+      </if>
+      <if test="bgsdh != null">
+        BGSDH,
+      </if>
+      <if test="zzdh != null">
+        ZZDH,
+      </if>
+      <if test="chj != null">
+        CHJ,
+      </if>
+      <if test="yddh != null">
+        YDDH,
+      </if>
+      <if test="dzyx != null">
+        DZYX,
+      </if>
+      <if test="gzlx != null">
+        GZLX,
+      </if>
+      <if test="xzw != null">
+        XZW,
+      </if>
+      <if test="jb != null">
+        JB,
+      </if>
+      <if test="zwgz != null">
+        ZWGZ,
+      </if>
+      <if test="gzjb != null">
+        GZJB,
+      </if>
+      <if test="gzzxsj != null">
+        GZZXSJ,
+      </if>
+      <if test="gzdc != null">
+        GZDC,
+      </if>
+      <if test="gze != null">
+        GZE,
+      </if>
+      <if test="jjsj != null">
+        JJSJ,
+      </if>
+      <if test="ltsj != null">
+        LTSJ,
+      </if>
+      <if test="bdsj != null">
+        BDSJ,
+      </if>
+      <if test="jsdjgz != null">
+        JSDJGZ,
+      </if>
+      <if test="gwgzdc != null">
+        GWGZDC,
+      </if>
+      <if test="gwgze != null">
+        GWGZE,
+      </if>
+      <if test="jdsj != null">
+        JDSJ,
+      </if>
+      <if test="gw != null">
+        GW,
+      </if>
+      <if test="gwdj != null">
+        GWDJ,
+      </if>
+      <if test="zjgwgze != null">
+        ZJGWGZE,
+      </if>
+      <if test="xj != null">
+        XJ,
+      </if>
+      <if test="xjgze != null">
+        XJGZE,
+      </if>
+      <if test="jxjt != null">
+        JXJT,
+      </if>
+      <if test="tgjt != null">
+        TGJT,
+      </if>
+      <if test="bljt != null">
+        BLJT,
+      </if>
+      <if test="zfbt != null">
+        ZFBT,
+      </if>
+      <if test="djqnf != null">
+        DJQNF,
+      </if>
+      <if test="khjc != null">
+        KHJC,
+      </if>
+      <if test="ndkh != null">
+        NDKH,
+      </if>
+      <if test="shbxh != null">
+        SHBXH,
+      </if>
+      <if test="shbxnr != null">
+        SHBXNR,
+      </if>
+      <if test="jhsyzm != null">
+        JHSYZM,
+      </if>
+      <if test="pxz != null">
+        PXZ,
+      </if>
+      <if test="bz != null">
+        BZ,
+      </if>
+      <if test="zxsj != null">
+        ZXSJ,
+      </if>
+      <if test="bzTwo != null">
+        BZ_TWO,
+      </if>
+      <if test="yjxbz != null">
+        YJXBZ,
+      </if>
+      <if test="xjxbz != null">
+        XJXBZ,
+      </if>
+      <if test="zxsjOne != null">
+        ZXSJ_ONE,
+      </if>
+      <if test="lb != null">
+        LB,
+      </if>
+      <if test="ssjb != null">
+        SSJB,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="deptId != null">
+        #{deptId,jdbcType=VARCHAR},
+      </if>
+      <if test="xm != null">
+        #{xm,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        #{sex,jdbcType=DECIMAL},
+      </if>
+      <if test="sf != null">
+        #{sf,jdbcType=VARCHAR},
+      </if>
+      <if test="csrq != null">
+        #{csrq,jdbcType=DATE},
+      </if>
+      <if test="mz != null">
+        #{mz,jdbcType=VARCHAR},
+      </if>
+      <if test="jg != null">
+        #{jg,jdbcType=VARCHAR},
+      </if>
+      <if test="zgxl != null">
+        #{zgxl,jdbcType=VARCHAR},
+      </if>
+      <if test="xw != null">
+        #{xw,jdbcType=VARCHAR},
+      </if>
+      <if test="qrzxl != null">
+        #{qrzxl,jdbcType=VARCHAR},
+      </if>
+      <if test="bysjOne != null">
+        #{bysjOne,jdbcType=DATE},
+      </if>
+      <if test="sxzyOne != null">
+        #{sxzyOne,jdbcType=VARCHAR},
+      </if>
+      <if test="hqxl != null">
+        #{hqxl,jdbcType=VARCHAR},
+      </if>
+      <if test="hqxlsj != null">
+        #{hqxlsj,jdbcType=DATE},
+      </if>
+      <if test="sxsj != null">
+        #{sxsj,jdbcType=DATE},
+      </if>
+      <if test="zzdz != null">
+        #{zzdz,jdbcType=VARCHAR},
+      </if>
+      <if test="cym != null">
+        #{cym,jdbcType=VARCHAR},
+      </if>
+      <if test="sfzhm != null">
+        #{sfzhm,jdbcType=VARCHAR},
+      </if>
+      <if test="byyxOne != null">
+        #{byyxOne,jdbcType=VARCHAR},
+      </if>
+      <if test="sxzyTwo != null">
+        #{sxzyTwo,jdbcType=VARCHAR},
+      </if>
+      <if test="byyxZz != null">
+        #{byyxZz,jdbcType=VARCHAR},
+      </if>
+      <if test="hqxw != null">
+        #{hqxw,jdbcType=VARCHAR},
+      </if>
+      <if test="hqxwsj != null">
+        #{hqxwsj,jdbcType=DATE},
+      </if>
+      <if test="hqxwyx != null">
+        #{hqxwyx,jdbcType=VARCHAR},
+      </if>
+      <if test="hqxwzy != null">
+        #{hqxwzy,jdbcType=VARCHAR},
+      </if>
+      <if test="zzmm != null">
+        #{zzmm,jdbcType=DECIMAL},
+      </if>
+      <if test="hshdrd != null">
+        #{hshdrd,jdbcType=VARCHAR},
+      </if>
+      <if test="cjgzsj != null">
+        #{cjgzsj,jdbcType=DATE},
+      </if>
+      <if test="lbdwsj != null">
+        #{lbdwsj,jdbcType=DATE},
+      </if>
+      <if test="zzzt != null">
+        #{zzzt,jdbcType=DECIMAL},
+      </if>
+      <if test="txsj != null">
+        #{txsj,jdbcType=DATE},
+      </if>
+      <if test="dcsj != null">
+        #{dcsj,jdbcType=DATE},
+      </if>
+      <if test="bgsj != null">
+        #{bgsj,jdbcType=DATE},
+      </if>
+      <if test="swsj != null">
+        #{swsj,jdbcType=DATE},
+      </if>
+      <if test="lxsj != null">
+        #{lxsj,jdbcType=DATE},
+      </if>
+      <if test="szks != null">
+        #{szks,jdbcType=VARCHAR},
+      </if>
+      <if test="yxzzw != null">
+        #{yxzzw,jdbcType=VARCHAR},
+      </if>
+      <if test="zj != null">
+        #{zj,jdbcType=VARCHAR},
+      </if>
+      <if test="rxzsj != null">
+        #{rxzsj,jdbcType=DATE},
+      </if>
+      <if test="rtzjsj != null">
+        #{rtzjsj,jdbcType=DATE},
+      </if>
+      <if test="zyjsxl != null">
+        #{zyjsxl,jdbcType=VARCHAR},
+      </if>
+      <if test="jszw != null">
+        #{jszw,jdbcType=VARCHAR},
+      </if>
+      <if test="przt != null">
+        #{przt,jdbcType=DECIMAL},
+      </if>
+      <if test="prsj != null">
+        #{prsj,jdbcType=DATE},
+      </if>
+      <if test="yhzg != null">
+        #{yhzg,jdbcType=VARCHAR},
+      </if>
+      <if test="zgqdsj != null">
+        #{zgqdsj,jdbcType=DATE},
+      </if>
+      <if test="jxjb != null">
+        #{jxjb,jdbcType=VARCHAR},
+      </if>
+      <if test="sssj != null">
+        #{sssj,jdbcType=DATE},
+      </if>
+      <if test="jh != null">
+        #{jh,jdbcType=DECIMAL},
+      </if>
+      <if test="fd != null">
+        #{fd,jdbcType=DECIMAL},
+      </if>
+      <if test="xh != null">
+        #{xh,jdbcType=DECIMAL},
+      </if>
+      <if test="dah != null">
+        #{dah,jdbcType=VARCHAR},
+      </if>
+      <if test="gjjszgz != null">
+        #{gjjszgz,jdbcType=DECIMAL},
+      </if>
+      <if test="dazdw != null">
+        #{dazdw,jdbcType=DECIMAL},
+      </if>
+      <if test="grjl != null">
+        #{grjl,jdbcType=VARCHAR},
+      </if>
+      <if test="tc != null">
+        #{tc,jdbcType=VARCHAR},
+      </if>
+      <if test="jtcy != null">
+        #{jtcy,jdbcType=VARCHAR},
+      </if>
+      <if test="czdz != null">
+        #{czdz,jdbcType=VARCHAR},
+      </if>
+      <if test="czdzyb != null">
+        #{czdzyb,jdbcType=VARCHAR},
+      </if>
+      <if test="zzdzyb != null">
+        #{zzdzyb,jdbcType=VARCHAR},
+      </if>
+      <if test="bgsdh != null">
+        #{bgsdh,jdbcType=VARCHAR},
+      </if>
+      <if test="zzdh != null">
+        #{zzdh,jdbcType=VARCHAR},
+      </if>
+      <if test="chj != null">
+        #{chj,jdbcType=VARCHAR},
+      </if>
+      <if test="yddh != null">
+        #{yddh,jdbcType=VARCHAR},
+      </if>
+      <if test="dzyx != null">
+        #{dzyx,jdbcType=VARCHAR},
+      </if>
+      <if test="gzlx != null">
+        #{gzlx,jdbcType=VARCHAR},
+      </if>
+      <if test="xzw != null">
+        #{xzw,jdbcType=VARCHAR},
+      </if>
+      <if test="jb != null">
+        #{jb,jdbcType=VARCHAR},
+      </if>
+      <if test="zwgz != null">
+        #{zwgz,jdbcType=DECIMAL},
+      </if>
+      <if test="gzjb != null">
+        #{gzjb,jdbcType=VARCHAR},
+      </if>
+      <if test="gzzxsj != null">
+        #{gzzxsj,jdbcType=DATE},
+      </if>
+      <if test="gzdc != null">
+        #{gzdc,jdbcType=DECIMAL},
+      </if>
+      <if test="gze != null">
+        #{gze,jdbcType=VARCHAR},
+      </if>
+      <if test="jjsj != null">
+        #{jjsj,jdbcType=DATE},
+      </if>
+      <if test="ltsj != null">
+        #{ltsj,jdbcType=DATE},
+      </if>
+      <if test="bdsj != null">
+        #{bdsj,jdbcType=DATE},
+      </if>
+      <if test="jsdjgz != null">
+        #{jsdjgz,jdbcType=DECIMAL},
+      </if>
+      <if test="gwgzdc != null">
+        #{gwgzdc,jdbcType=DECIMAL},
+      </if>
+      <if test="gwgze != null">
+        #{gwgze,jdbcType=DECIMAL},
+      </if>
+      <if test="jdsj != null">
+        #{jdsj,jdbcType=DATE},
+      </if>
+      <if test="gw != null">
+        #{gw,jdbcType=VARCHAR},
+      </if>
+      <if test="gwdj != null">
+        #{gwdj,jdbcType=VARCHAR},
+      </if>
+      <if test="zjgwgze != null">
+        #{zjgwgze,jdbcType=DECIMAL},
+      </if>
+      <if test="xj != null">
+        #{xj,jdbcType=DECIMAL},
+      </if>
+      <if test="xjgze != null">
+        #{xjgze,jdbcType=DECIMAL},
+      </if>
+      <if test="jxjt != null">
+        #{jxjt,jdbcType=DECIMAL},
+      </if>
+      <if test="tgjt != null">
+        #{tgjt,jdbcType=DECIMAL},
+      </if>
+      <if test="bljt != null">
+        #{bljt,jdbcType=DECIMAL},
+      </if>
+      <if test="zfbt != null">
+        #{zfbt,jdbcType=DECIMAL},
+      </if>
+      <if test="djqnf != null">
+        #{djqnf,jdbcType=DECIMAL},
+      </if>
+      <if test="khjc != null">
+        #{khjc,jdbcType=VARCHAR},
+      </if>
+      <if test="ndkh != null">
+        #{ndkh,jdbcType=VARCHAR},
+      </if>
+      <if test="shbxh != null">
+        #{shbxh,jdbcType=VARCHAR},
+      </if>
+      <if test="shbxnr != null">
+        #{shbxnr,jdbcType=VARCHAR},
+      </if>
+      <if test="jhsyzm != null">
+        #{jhsyzm,jdbcType=DECIMAL},
+      </if>
+      <if test="pxz != null">
+        #{pxz,jdbcType=VARCHAR},
+      </if>
+      <if test="bz != null">
+        #{bz,jdbcType=VARCHAR},
+      </if>
+      <if test="zxsj != null">
+        #{zxsj,jdbcType=DATE},
+      </if>
+      <if test="bzTwo != null">
+        #{bzTwo,jdbcType=VARCHAR},
+      </if>
+      <if test="yjxbz != null">
+        #{yjxbz,jdbcType=DECIMAL},
+      </if>
+      <if test="xjxbz != null">
+        #{xjxbz,jdbcType=DECIMAL},
+      </if>
+      <if test="zxsjOne != null">
+        #{zxsjOne,jdbcType=DATE},
+      </if>
+      <if test="lb != null">
+        #{lb,jdbcType=VARCHAR},
+      </if>
+      <if test="ssjb != null">
+        #{ssjb,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <resultMap id="BaseResultMap" type="com.yunzainfo.pitcher.plugin.hr.entity.PersonalRecords">
+    <result column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="DEPT_ID" jdbcType="VARCHAR" property="deptId" />
+    <result column="XM" jdbcType="VARCHAR" property="xm" />
+    <result column="SEX" jdbcType="DECIMAL" property="sex" />
+    <result column="SF" jdbcType="VARCHAR" property="sf" />
+    <result column="CSRQ" jdbcType="DATE" property="csrq" />
+    <result column="MZ" jdbcType="VARCHAR" property="mz" />
+    <result column="JG" jdbcType="VARCHAR" property="jg" />
+    <result column="ZGXL" jdbcType="VARCHAR" property="zgxl" />
+    <result column="XW" jdbcType="VARCHAR" property="xw" />
+    <result column="QRZXL" jdbcType="VARCHAR" property="qrzxl" />
+    <result column="BYSJ_ONE" jdbcType="DATE" property="bysjOne" />
+    <result column="SXZY_ONE" jdbcType="VARCHAR" property="sxzyOne" />
+    <result column="HQXL" jdbcType="VARCHAR" property="hqxl" />
+    <result column="HQXLSJ" jdbcType="DATE" property="hqxlsj" />
+    <result column="SXSJ" jdbcType="DATE" property="sxsj" />
+    <result column="ZZDZ" jdbcType="VARCHAR" property="zzdz" />
+    <result column="CYM" jdbcType="VARCHAR" property="cym" />
+    <result column="SFZHM" jdbcType="VARCHAR" property="sfzhm" />
+    <result column="BYYX_ONE" jdbcType="VARCHAR" property="byyxOne" />
+    <result column="SXZY_TWO" jdbcType="VARCHAR" property="sxzyTwo" />
+    <result column="BYYX_ZZ" jdbcType="VARCHAR" property="byyxZz" />
+    <result column="HQXW" jdbcType="VARCHAR" property="hqxw" />
+    <result column="HQXWSJ" jdbcType="DATE" property="hqxwsj" />
+    <result column="HQXWYX" jdbcType="VARCHAR" property="hqxwyx" />
+    <result column="HQXWZY" jdbcType="VARCHAR" property="hqxwzy" />
+    <result column="ZZMM" jdbcType="DECIMAL" property="zzmm" />
+    <result column="HSHDRD" jdbcType="VARCHAR" property="hshdrd" />
+    <result column="CJGZSJ" jdbcType="DATE" property="cjgzsj" />
+    <result column="LBDWSJ" jdbcType="DATE" property="lbdwsj" />
+    <result column="ZZZT" jdbcType="DECIMAL" property="zzzt" />
+    <result column="TXSJ" jdbcType="DATE" property="txsj" />
+    <result column="DCSJ" jdbcType="DATE" property="dcsj" />
+    <result column="BGSJ" jdbcType="DATE" property="bgsj" />
+    <result column="SWSJ" jdbcType="DATE" property="swsj" />
+    <result column="LXSJ" jdbcType="DATE" property="lxsj" />
+    <result column="SZKS" jdbcType="VARCHAR" property="szks" />
+    <result column="YXZZW" jdbcType="VARCHAR" property="yxzzw" />
+    <result column="ZJ" jdbcType="VARCHAR" property="zj" />
+    <result column="RXZSJ" jdbcType="DATE" property="rxzsj" />
+    <result column="RTZJSJ" jdbcType="DATE" property="rtzjsj" />
+    <result column="ZYJSXL" jdbcType="VARCHAR" property="zyjsxl" />
+    <result column="JSZW" jdbcType="VARCHAR" property="jszw" />
+    <result column="PRZT" jdbcType="DECIMAL" property="przt" />
+    <result column="PRSJ" jdbcType="DATE" property="prsj" />
+    <result column="YHZG" jdbcType="VARCHAR" property="yhzg" />
+    <result column="ZGQDSJ" jdbcType="DATE" property="zgqdsj" />
+    <result column="JXJB" jdbcType="VARCHAR" property="jxjb" />
+    <result column="SSSJ" jdbcType="DATE" property="sssj" />
+    <result column="JH" jdbcType="DECIMAL" property="jh" />
+    <result column="FD" jdbcType="DECIMAL" property="fd" />
+    <result column="XH" jdbcType="DECIMAL" property="xh" />
+    <result column="DAH" jdbcType="VARCHAR" property="dah" />
+    <result column="GJJSZGZ" jdbcType="DECIMAL" property="gjjszgz" />
+    <result column="DAZDW" jdbcType="DECIMAL" property="dazdw" />
+    <result column="GRJL" jdbcType="VARCHAR" property="grjl" />
+    <result column="TC" jdbcType="VARCHAR" property="tc" />
+    <result column="JTCY" jdbcType="VARCHAR" property="jtcy" />
+    <result column="CZDZ" jdbcType="VARCHAR" property="czdz" />
+    <result column="CZDZYB" jdbcType="VARCHAR" property="czdzyb" />
+    <result column="ZZDZYB" jdbcType="VARCHAR" property="zzdzyb" />
+    <result column="BGSDH" jdbcType="VARCHAR" property="bgsdh" />
+    <result column="ZZDH" jdbcType="VARCHAR" property="zzdh" />
+    <result column="CHJ" jdbcType="VARCHAR" property="chj" />
+    <result column="YDDH" jdbcType="VARCHAR" property="yddh" />
+    <result column="DZYX" jdbcType="VARCHAR" property="dzyx" />
+    <result column="GZLX" jdbcType="VARCHAR" property="gzlx" />
+    <result column="XZW" jdbcType="VARCHAR" property="xzw" />
+    <result column="JB" jdbcType="VARCHAR" property="jb" />
+    <result column="ZWGZ" jdbcType="DECIMAL" property="zwgz" />
+    <result column="GZJB" jdbcType="VARCHAR" property="gzjb" />
+    <result column="GZZXSJ" jdbcType="DATE" property="gzzxsj" />
+    <result column="GZDC" jdbcType="DECIMAL" property="gzdc" />
+    <result column="GZE" jdbcType="VARCHAR" property="gze" />
+    <result column="JJSJ" jdbcType="DATE" property="jjsj" />
+    <result column="LTSJ" jdbcType="DATE" property="ltsj" />
+    <result column="BDSJ" jdbcType="DATE" property="bdsj" />
+    <result column="JSDJGZ" jdbcType="DECIMAL" property="jsdjgz" />
+    <result column="GWGZDC" jdbcType="DECIMAL" property="gwgzdc" />
+    <result column="GWGZE" jdbcType="DECIMAL" property="gwgze" />
+    <result column="JDSJ" jdbcType="DATE" property="jdsj" />
+    <result column="GW" jdbcType="VARCHAR" property="gw" />
+    <result column="GWDJ" jdbcType="VARCHAR" property="gwdj" />
+    <result column="ZJGWGZE" jdbcType="DECIMAL" property="zjgwgze" />
+    <result column="XJ" jdbcType="DECIMAL" property="xj" />
+    <result column="XJGZE" jdbcType="DECIMAL" property="xjgze" />
+    <result column="JXJT" jdbcType="DECIMAL" property="jxjt" />
+    <result column="TGJT" jdbcType="DECIMAL" property="tgjt" />
+    <result column="BLJT" jdbcType="DECIMAL" property="bljt" />
+    <result column="ZFBT" jdbcType="DECIMAL" property="zfbt" />
+    <result column="DJQNF" jdbcType="DECIMAL" property="djqnf" />
+    <result column="KHJC" jdbcType="VARCHAR" property="khjc" />
+    <result column="NDKH" jdbcType="VARCHAR" property="ndkh" />
+    <result column="SHBXH" jdbcType="VARCHAR" property="shbxh" />
+    <result column="SHBXNR" jdbcType="VARCHAR" property="shbxnr" />
+    <result column="JHSYZM" jdbcType="DECIMAL" property="jhsyzm" />
+    <result column="PXZ" jdbcType="VARCHAR" property="pxz" />
+    <result column="BZ" jdbcType="VARCHAR" property="bz" />
+    <result column="ZXSJ" jdbcType="DATE" property="zxsj" />
+    <result column="BZ_TWO" jdbcType="VARCHAR" property="bzTwo" />
+    <result column="YJXBZ" jdbcType="DECIMAL" property="yjxbz" />
+    <result column="XJXBZ" jdbcType="DECIMAL" property="xjxbz" />
+    <result column="ZXSJ_ONE" jdbcType="DATE" property="zxsjOne" />
+    <result column="LB" jdbcType="VARCHAR" property="lb" />
+    <result column="SSJB" jdbcType="VARCHAR" property="ssjb" />
+  </resultMap>
+  <insert id="insert" parameterType="com.yunzainfo.pitcher.plugin.hr.entity.PersonalRecords">
+    insert into PERSONAL_RECORDS (ID, DEPT_ID, XM, 
+      SEX, SF, CSRQ, MZ, 
+      JG, ZGXL, XW, QRZXL, 
+      BYSJ_ONE, SXZY_ONE, HQXL, 
+      HQXLSJ, SXSJ, ZZDZ, CYM, 
+      SFZHM, BYYX_ONE, SXZY_TWO, 
+      BYYX_ZZ, HQXW, HQXWSJ, 
+      HQXWYX, HQXWZY, ZZMM, 
+      HSHDRD, CJGZSJ, LBDWSJ, ZZZT, 
+      TXSJ, DCSJ, BGSJ, SWSJ, 
+      LXSJ, SZKS, YXZZW, ZJ, 
+      RXZSJ, RTZJSJ, ZYJSXL, JSZW, 
+      PRZT, PRSJ, YHZG, ZGQDSJ, 
+      JXJB, SSSJ, JH, FD, 
+      XH, DAH, GJJSZGZ, DAZDW, 
+      GRJL, TC, JTCY, CZDZ, 
+      CZDZYB, ZZDZYB, BGSDH, 
+      ZZDH, CHJ, YDDH, DZYX, 
+      GZLX, XZW, JB, ZWGZ, 
+      GZJB, GZZXSJ, GZDC, GZE, 
+      JJSJ, LTSJ, BDSJ, JSDJGZ, 
+      GWGZDC, GWGZE, JDSJ, GW, 
+      GWDJ, ZJGWGZE, XJ, 
+      XJGZE, JXJT, TGJT, 
+      BLJT, ZFBT, DJQNF, 
+      KHJC, NDKH, SHBXH, 
+      SHBXNR, JHSYZM, PXZ, 
+      BZ, ZXSJ, BZ_TWO, YJXBZ, 
+      XJXBZ, ZXSJ_ONE, LB, SSJB
+      )
+    values (#{id,jdbcType=VARCHAR}, #{deptId,jdbcType=VARCHAR}, #{xm,jdbcType=VARCHAR}, 
+      #{sex,jdbcType=DECIMAL}, #{sf,jdbcType=VARCHAR}, #{csrq,jdbcType=DATE}, #{mz,jdbcType=VARCHAR}, 
+      #{jg,jdbcType=VARCHAR}, #{zgxl,jdbcType=VARCHAR}, #{xw,jdbcType=VARCHAR}, #{qrzxl,jdbcType=VARCHAR}, 
+      #{bysjOne,jdbcType=DATE}, #{sxzyOne,jdbcType=VARCHAR}, #{hqxl,jdbcType=VARCHAR}, 
+      #{hqxlsj,jdbcType=DATE}, #{sxsj,jdbcType=DATE}, #{zzdz,jdbcType=VARCHAR}, #{cym,jdbcType=VARCHAR}, 
+      #{sfzhm,jdbcType=VARCHAR}, #{byyxOne,jdbcType=VARCHAR}, #{sxzyTwo,jdbcType=VARCHAR}, 
+      #{byyxZz,jdbcType=VARCHAR}, #{hqxw,jdbcType=VARCHAR}, #{hqxwsj,jdbcType=DATE}, 
+      #{hqxwyx,jdbcType=VARCHAR}, #{hqxwzy,jdbcType=VARCHAR}, #{zzmm,jdbcType=DECIMAL}, 
+      #{hshdrd,jdbcType=VARCHAR}, #{cjgzsj,jdbcType=DATE}, #{lbdwsj,jdbcType=DATE}, #{zzzt,jdbcType=DECIMAL}, 
+      #{txsj,jdbcType=DATE}, #{dcsj,jdbcType=DATE}, #{bgsj,jdbcType=DATE}, #{swsj,jdbcType=DATE}, 
+      #{lxsj,jdbcType=DATE}, #{szks,jdbcType=VARCHAR}, #{yxzzw,jdbcType=VARCHAR}, #{zj,jdbcType=VARCHAR}, 
+      #{rxzsj,jdbcType=DATE}, #{rtzjsj,jdbcType=DATE}, #{zyjsxl,jdbcType=VARCHAR}, #{jszw,jdbcType=VARCHAR}, 
+      #{przt,jdbcType=DECIMAL}, #{prsj,jdbcType=DATE}, #{yhzg,jdbcType=VARCHAR}, #{zgqdsj,jdbcType=DATE}, 
+      #{jxjb,jdbcType=VARCHAR}, #{sssj,jdbcType=DATE}, #{jh,jdbcType=DECIMAL}, #{fd,jdbcType=DECIMAL}, 
+      #{xh,jdbcType=DECIMAL}, #{dah,jdbcType=VARCHAR}, #{gjjszgz,jdbcType=DECIMAL}, #{dazdw,jdbcType=DECIMAL}, 
+      #{grjl,jdbcType=VARCHAR}, #{tc,jdbcType=VARCHAR}, #{jtcy,jdbcType=VARCHAR}, #{czdz,jdbcType=VARCHAR}, 
+      #{czdzyb,jdbcType=VARCHAR}, #{zzdzyb,jdbcType=VARCHAR}, #{bgsdh,jdbcType=VARCHAR}, 
+      #{zzdh,jdbcType=VARCHAR}, #{chj,jdbcType=VARCHAR}, #{yddh,jdbcType=VARCHAR}, #{dzyx,jdbcType=VARCHAR}, 
+      #{gzlx,jdbcType=VARCHAR}, #{xzw,jdbcType=VARCHAR}, #{jb,jdbcType=VARCHAR}, #{zwgz,jdbcType=DECIMAL}, 
+      #{gzjb,jdbcType=VARCHAR}, #{gzzxsj,jdbcType=DATE}, #{gzdc,jdbcType=DECIMAL}, #{gze,jdbcType=VARCHAR}, 
+      #{jjsj,jdbcType=DATE}, #{ltsj,jdbcType=DATE}, #{bdsj,jdbcType=DATE}, #{jsdjgz,jdbcType=DECIMAL}, 
+      #{gwgzdc,jdbcType=DECIMAL}, #{gwgze,jdbcType=DECIMAL}, #{jdsj,jdbcType=DATE}, #{gw,jdbcType=VARCHAR}, 
+      #{gwdj,jdbcType=VARCHAR}, #{zjgwgze,jdbcType=DECIMAL}, #{xj,jdbcType=DECIMAL}, 
+      #{xjgze,jdbcType=DECIMAL}, #{jxjt,jdbcType=DECIMAL}, #{tgjt,jdbcType=DECIMAL}, 
+      #{bljt,jdbcType=DECIMAL}, #{zfbt,jdbcType=DECIMAL}, #{djqnf,jdbcType=DECIMAL}, 
+      #{khjc,jdbcType=VARCHAR}, #{ndkh,jdbcType=VARCHAR}, #{shbxh,jdbcType=VARCHAR}, 
+      #{shbxnr,jdbcType=VARCHAR}, #{jhsyzm,jdbcType=DECIMAL}, #{pxz,jdbcType=VARCHAR}, 
+      #{bz,jdbcType=VARCHAR}, #{zxsj,jdbcType=DATE}, #{bzTwo,jdbcType=VARCHAR}, #{yjxbz,jdbcType=DECIMAL}, 
+      #{xjxbz,jdbcType=DECIMAL}, #{zxsjOne,jdbcType=DATE}, #{lb,jdbcType=VARCHAR}, #{ssjb,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.yunzainfo.pitcher.plugin.hr.entity.PersonalRecords">
+    insert into PERSONAL_RECORDS
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        ID,
+      </if>
+      <if test="deptId != null">
+        DEPT_ID,
+      </if>
+      <if test="xm != null">
+        XM,
+      </if>
+      <if test="sex != null">
+        SEX,
+      </if>
+      <if test="sf != null">
+        SF,
+      </if>
+      <if test="csrq != null">
+        CSRQ,
+      </if>
+      <if test="mz != null">
+        MZ,
+      </if>
+      <if test="jg != null">
+        JG,
+      </if>
+      <if test="zgxl != null">
+        ZGXL,
+      </if>
+      <if test="xw != null">
+        XW,
+      </if>
+      <if test="qrzxl != null">
+        QRZXL,
+      </if>
+      <if test="bysjOne != null">
+        BYSJ_ONE,
+      </if>
+      <if test="sxzyOne != null">
+        SXZY_ONE,
+      </if>
+      <if test="hqxl != null">
+        HQXL,
+      </if>
+      <if test="hqxlsj != null">
+        HQXLSJ,
+      </if>
+      <if test="sxsj != null">
+        SXSJ,
+      </if>
+      <if test="zzdz != null">
+        ZZDZ,
+      </if>
+      <if test="cym != null">
+        CYM,
+      </if>
+      <if test="sfzhm != null">
+        SFZHM,
+      </if>
+      <if test="byyxOne != null">
+        BYYX_ONE,
+      </if>
+      <if test="sxzyTwo != null">
+        SXZY_TWO,
+      </if>
+      <if test="byyxZz != null">
+        BYYX_ZZ,
+      </if>
+      <if test="hqxw != null">
+        HQXW,
+      </if>
+      <if test="hqxwsj != null">
+        HQXWSJ,
+      </if>
+      <if test="hqxwyx != null">
+        HQXWYX,
+      </if>
+      <if test="hqxwzy != null">
+        HQXWZY,
+      </if>
+      <if test="zzmm != null">
+        ZZMM,
+      </if>
+      <if test="hshdrd != null">
+        HSHDRD,
+      </if>
+      <if test="cjgzsj != null">
+        CJGZSJ,
+      </if>
+      <if test="lbdwsj != null">
+        LBDWSJ,
+      </if>
+      <if test="zzzt != null">
+        ZZZT,
+      </if>
+      <if test="txsj != null">
+        TXSJ,
+      </if>
+      <if test="dcsj != null">
+        DCSJ,
+      </if>
+      <if test="bgsj != null">
+        BGSJ,
+      </if>
+      <if test="swsj != null">
+        SWSJ,
+      </if>
+      <if test="lxsj != null">
+        LXSJ,
+      </if>
+      <if test="szks != null">
+        SZKS,
+      </if>
+      <if test="yxzzw != null">
+        YXZZW,
+      </if>
+      <if test="zj != null">
+        ZJ,
+      </if>
+      <if test="rxzsj != null">
+        RXZSJ,
+      </if>
+      <if test="rtzjsj != null">
+        RTZJSJ,
+      </if>
+      <if test="zyjsxl != null">
+        ZYJSXL,
+      </if>
+      <if test="jszw != null">
+        JSZW,
+      </if>
+      <if test="przt != null">
+        PRZT,
+      </if>
+      <if test="prsj != null">
+        PRSJ,
+      </if>
+      <if test="yhzg != null">
+        YHZG,
+      </if>
+      <if test="zgqdsj != null">
+        ZGQDSJ,
+      </if>
+      <if test="jxjb != null">
+        JXJB,
+      </if>
+      <if test="sssj != null">
+        SSSJ,
+      </if>
+      <if test="jh != null">
+        JH,
+      </if>
+      <if test="fd != null">
+        FD,
+      </if>
+      <if test="xh != null">
+        XH,
+      </if>
+      <if test="dah != null">
+        DAH,
+      </if>
+      <if test="gjjszgz != null">
+        GJJSZGZ,
+      </if>
+      <if test="dazdw != null">
+        DAZDW,
+      </if>
+      <if test="grjl != null">
+        GRJL,
+      </if>
+      <if test="tc != null">
+        TC,
+      </if>
+      <if test="jtcy != null">
+        JTCY,
+      </if>
+      <if test="czdz != null">
+        CZDZ,
+      </if>
+      <if test="czdzyb != null">
+        CZDZYB,
+      </if>
+      <if test="zzdzyb != null">
+        ZZDZYB,
+      </if>
+      <if test="bgsdh != null">
+        BGSDH,
+      </if>
+      <if test="zzdh != null">
+        ZZDH,
+      </if>
+      <if test="chj != null">
+        CHJ,
+      </if>
+      <if test="yddh != null">
+        YDDH,
+      </if>
+      <if test="dzyx != null">
+        DZYX,
+      </if>
+      <if test="gzlx != null">
+        GZLX,
+      </if>
+      <if test="xzw != null">
+        XZW,
+      </if>
+      <if test="jb != null">
+        JB,
+      </if>
+      <if test="zwgz != null">
+        ZWGZ,
+      </if>
+      <if test="gzjb != null">
+        GZJB,
+      </if>
+      <if test="gzzxsj != null">
+        GZZXSJ,
+      </if>
+      <if test="gzdc != null">
+        GZDC,
+      </if>
+      <if test="gze != null">
+        GZE,
+      </if>
+      <if test="jjsj != null">
+        JJSJ,
+      </if>
+      <if test="ltsj != null">
+        LTSJ,
+      </if>
+      <if test="bdsj != null">
+        BDSJ,
+      </if>
+      <if test="jsdjgz != null">
+        JSDJGZ,
+      </if>
+      <if test="gwgzdc != null">
+        GWGZDC,
+      </if>
+      <if test="gwgze != null">
+        GWGZE,
+      </if>
+      <if test="jdsj != null">
+        JDSJ,
+      </if>
+      <if test="gw != null">
+        GW,
+      </if>
+      <if test="gwdj != null">
+        GWDJ,
+      </if>
+      <if test="zjgwgze != null">
+        ZJGWGZE,
+      </if>
+      <if test="xj != null">
+        XJ,
+      </if>
+      <if test="xjgze != null">
+        XJGZE,
+      </if>
+      <if test="jxjt != null">
+        JXJT,
+      </if>
+      <if test="tgjt != null">
+        TGJT,
+      </if>
+      <if test="bljt != null">
+        BLJT,
+      </if>
+      <if test="zfbt != null">
+        ZFBT,
+      </if>
+      <if test="djqnf != null">
+        DJQNF,
+      </if>
+      <if test="khjc != null">
+        KHJC,
+      </if>
+      <if test="ndkh != null">
+        NDKH,
+      </if>
+      <if test="shbxh != null">
+        SHBXH,
+      </if>
+      <if test="shbxnr != null">
+        SHBXNR,
+      </if>
+      <if test="jhsyzm != null">
+        JHSYZM,
+      </if>
+      <if test="pxz != null">
+        PXZ,
+      </if>
+      <if test="bz != null">
+        BZ,
+      </if>
+      <if test="zxsj != null">
+        ZXSJ,
+      </if>
+      <if test="bzTwo != null">
+        BZ_TWO,
+      </if>
+      <if test="yjxbz != null">
+        YJXBZ,
+      </if>
+      <if test="xjxbz != null">
+        XJXBZ,
+      </if>
+      <if test="zxsjOne != null">
+        ZXSJ_ONE,
+      </if>
+      <if test="lb != null">
+        LB,
+      </if>
+      <if test="ssjb != null">
+        SSJB,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="deptId != null">
+        #{deptId,jdbcType=VARCHAR},
+      </if>
+      <if test="xm != null">
+        #{xm,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        #{sex,jdbcType=DECIMAL},
+      </if>
+      <if test="sf != null">
+        #{sf,jdbcType=VARCHAR},
+      </if>
+      <if test="csrq != null">
+        #{csrq,jdbcType=DATE},
+      </if>
+      <if test="mz != null">
+        #{mz,jdbcType=VARCHAR},
+      </if>
+      <if test="jg != null">
+        #{jg,jdbcType=VARCHAR},
+      </if>
+      <if test="zgxl != null">
+        #{zgxl,jdbcType=VARCHAR},
+      </if>
+      <if test="xw != null">
+        #{xw,jdbcType=VARCHAR},
+      </if>
+      <if test="qrzxl != null">
+        #{qrzxl,jdbcType=VARCHAR},
+      </if>
+      <if test="bysjOne != null">
+        #{bysjOne,jdbcType=DATE},
+      </if>
+      <if test="sxzyOne != null">
+        #{sxzyOne,jdbcType=VARCHAR},
+      </if>
+      <if test="hqxl != null">
+        #{hqxl,jdbcType=VARCHAR},
+      </if>
+      <if test="hqxlsj != null">
+        #{hqxlsj,jdbcType=DATE},
+      </if>
+      <if test="sxsj != null">
+        #{sxsj,jdbcType=DATE},
+      </if>
+      <if test="zzdz != null">
+        #{zzdz,jdbcType=VARCHAR},
+      </if>
+      <if test="cym != null">
+        #{cym,jdbcType=VARCHAR},
+      </if>
+      <if test="sfzhm != null">
+        #{sfzhm,jdbcType=VARCHAR},
+      </if>
+      <if test="byyxOne != null">
+        #{byyxOne,jdbcType=VARCHAR},
+      </if>
+      <if test="sxzyTwo != null">
+        #{sxzyTwo,jdbcType=VARCHAR},
+      </if>
+      <if test="byyxZz != null">
+        #{byyxZz,jdbcType=VARCHAR},
+      </if>
+      <if test="hqxw != null">
+        #{hqxw,jdbcType=VARCHAR},
+      </if>
+      <if test="hqxwsj != null">
+        #{hqxwsj,jdbcType=DATE},
+      </if>
+      <if test="hqxwyx != null">
+        #{hqxwyx,jdbcType=VARCHAR},
+      </if>
+      <if test="hqxwzy != null">
+        #{hqxwzy,jdbcType=VARCHAR},
+      </if>
+      <if test="zzmm != null">
+        #{zzmm,jdbcType=DECIMAL},
+      </if>
+      <if test="hshdrd != null">
+        #{hshdrd,jdbcType=VARCHAR},
+      </if>
+      <if test="cjgzsj != null">
+        #{cjgzsj,jdbcType=DATE},
+      </if>
+      <if test="lbdwsj != null">
+        #{lbdwsj,jdbcType=DATE},
+      </if>
+      <if test="zzzt != null">
+        #{zzzt,jdbcType=DECIMAL},
+      </if>
+      <if test="txsj != null">
+        #{txsj,jdbcType=DATE},
+      </if>
+      <if test="dcsj != null">
+        #{dcsj,jdbcType=DATE},
+      </if>
+      <if test="bgsj != null">
+        #{bgsj,jdbcType=DATE},
+      </if>
+      <if test="swsj != null">
+        #{swsj,jdbcType=DATE},
+      </if>
+      <if test="lxsj != null">
+        #{lxsj,jdbcType=DATE},
+      </if>
+      <if test="szks != null">
+        #{szks,jdbcType=VARCHAR},
+      </if>
+      <if test="yxzzw != null">
+        #{yxzzw,jdbcType=VARCHAR},
+      </if>
+      <if test="zj != null">
+        #{zj,jdbcType=VARCHAR},
+      </if>
+      <if test="rxzsj != null">
+        #{rxzsj,jdbcType=DATE},
+      </if>
+      <if test="rtzjsj != null">
+        #{rtzjsj,jdbcType=DATE},
+      </if>
+      <if test="zyjsxl != null">
+        #{zyjsxl,jdbcType=VARCHAR},
+      </if>
+      <if test="jszw != null">
+        #{jszw,jdbcType=VARCHAR},
+      </if>
+      <if test="przt != null">
+        #{przt,jdbcType=DECIMAL},
+      </if>
+      <if test="prsj != null">
+        #{prsj,jdbcType=DATE},
+      </if>
+      <if test="yhzg != null">
+        #{yhzg,jdbcType=VARCHAR},
+      </if>
+      <if test="zgqdsj != null">
+        #{zgqdsj,jdbcType=DATE},
+      </if>
+      <if test="jxjb != null">
+        #{jxjb,jdbcType=VARCHAR},
+      </if>
+      <if test="sssj != null">
+        #{sssj,jdbcType=DATE},
+      </if>
+      <if test="jh != null">
+        #{jh,jdbcType=DECIMAL},
+      </if>
+      <if test="fd != null">
+        #{fd,jdbcType=DECIMAL},
+      </if>
+      <if test="xh != null">
+        #{xh,jdbcType=DECIMAL},
+      </if>
+      <if test="dah != null">
+        #{dah,jdbcType=VARCHAR},
+      </if>
+      <if test="gjjszgz != null">
+        #{gjjszgz,jdbcType=DECIMAL},
+      </if>
+      <if test="dazdw != null">
+        #{dazdw,jdbcType=DECIMAL},
+      </if>
+      <if test="grjl != null">
+        #{grjl,jdbcType=VARCHAR},
+      </if>
+      <if test="tc != null">
+        #{tc,jdbcType=VARCHAR},
+      </if>
+      <if test="jtcy != null">
+        #{jtcy,jdbcType=VARCHAR},
+      </if>
+      <if test="czdz != null">
+        #{czdz,jdbcType=VARCHAR},
+      </if>
+      <if test="czdzyb != null">
+        #{czdzyb,jdbcType=VARCHAR},
+      </if>
+      <if test="zzdzyb != null">
+        #{zzdzyb,jdbcType=VARCHAR},
+      </if>
+      <if test="bgsdh != null">
+        #{bgsdh,jdbcType=VARCHAR},
+      </if>
+      <if test="zzdh != null">
+        #{zzdh,jdbcType=VARCHAR},
+      </if>
+      <if test="chj != null">
+        #{chj,jdbcType=VARCHAR},
+      </if>
+      <if test="yddh != null">
+        #{yddh,jdbcType=VARCHAR},
+      </if>
+      <if test="dzyx != null">
+        #{dzyx,jdbcType=VARCHAR},
+      </if>
+      <if test="gzlx != null">
+        #{gzlx,jdbcType=VARCHAR},
+      </if>
+      <if test="xzw != null">
+        #{xzw,jdbcType=VARCHAR},
+      </if>
+      <if test="jb != null">
+        #{jb,jdbcType=VARCHAR},
+      </if>
+      <if test="zwgz != null">
+        #{zwgz,jdbcType=DECIMAL},
+      </if>
+      <if test="gzjb != null">
+        #{gzjb,jdbcType=VARCHAR},
+      </if>
+      <if test="gzzxsj != null">
+        #{gzzxsj,jdbcType=DATE},
+      </if>
+      <if test="gzdc != null">
+        #{gzdc,jdbcType=DECIMAL},
+      </if>
+      <if test="gze != null">
+        #{gze,jdbcType=VARCHAR},
+      </if>
+      <if test="jjsj != null">
+        #{jjsj,jdbcType=DATE},
+      </if>
+      <if test="ltsj != null">
+        #{ltsj,jdbcType=DATE},
+      </if>
+      <if test="bdsj != null">
+        #{bdsj,jdbcType=DATE},
+      </if>
+      <if test="jsdjgz != null">
+        #{jsdjgz,jdbcType=DECIMAL},
+      </if>
+      <if test="gwgzdc != null">
+        #{gwgzdc,jdbcType=DECIMAL},
+      </if>
+      <if test="gwgze != null">
+        #{gwgze,jdbcType=DECIMAL},
+      </if>
+      <if test="jdsj != null">
+        #{jdsj,jdbcType=DATE},
+      </if>
+      <if test="gw != null">
+        #{gw,jdbcType=VARCHAR},
+      </if>
+      <if test="gwdj != null">
+        #{gwdj,jdbcType=VARCHAR},
+      </if>
+      <if test="zjgwgze != null">
+        #{zjgwgze,jdbcType=DECIMAL},
+      </if>
+      <if test="xj != null">
+        #{xj,jdbcType=DECIMAL},
+      </if>
+      <if test="xjgze != null">
+        #{xjgze,jdbcType=DECIMAL},
+      </if>
+      <if test="jxjt != null">
+        #{jxjt,jdbcType=DECIMAL},
+      </if>
+      <if test="tgjt != null">
+        #{tgjt,jdbcType=DECIMAL},
+      </if>
+      <if test="bljt != null">
+        #{bljt,jdbcType=DECIMAL},
+      </if>
+      <if test="zfbt != null">
+        #{zfbt,jdbcType=DECIMAL},
+      </if>
+      <if test="djqnf != null">
+        #{djqnf,jdbcType=DECIMAL},
+      </if>
+      <if test="khjc != null">
+        #{khjc,jdbcType=VARCHAR},
+      </if>
+      <if test="ndkh != null">
+        #{ndkh,jdbcType=VARCHAR},
+      </if>
+      <if test="shbxh != null">
+        #{shbxh,jdbcType=VARCHAR},
+      </if>
+      <if test="shbxnr != null">
+        #{shbxnr,jdbcType=VARCHAR},
+      </if>
+      <if test="jhsyzm != null">
+        #{jhsyzm,jdbcType=DECIMAL},
+      </if>
+      <if test="pxz != null">
+        #{pxz,jdbcType=VARCHAR},
+      </if>
+      <if test="bz != null">
+        #{bz,jdbcType=VARCHAR},
+      </if>
+      <if test="zxsj != null">
+        #{zxsj,jdbcType=DATE},
+      </if>
+      <if test="bzTwo != null">
+        #{bzTwo,jdbcType=VARCHAR},
+      </if>
+      <if test="yjxbz != null">
+        #{yjxbz,jdbcType=DECIMAL},
+      </if>
+      <if test="xjxbz != null">
+        #{xjxbz,jdbcType=DECIMAL},
+      </if>
+      <if test="zxsjOne != null">
+        #{zxsjOne,jdbcType=DATE},
+      </if>
+      <if test="lb != null">
+        #{lb,jdbcType=VARCHAR},
+      </if>
+      <if test="ssjb != null">
+        #{ssjb,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>
